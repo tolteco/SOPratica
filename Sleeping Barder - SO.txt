@@ -1,0 +1,2 @@
+https://en.wikipedia.org/wiki/Sleeping_barber_problem
+http://www.ic.unicamp.br/~islene/mc514/barbeiro/barbeiro.pdf

@@ -1,2 +1,3 @@
 https://en.wikipedia.org/wiki/Sleeping_barber_problem
 http://www.ic.unicamp.br/~islene/mc514/barbeiro/barbeiro.pdf
+http://ces33.blogspot.com.br/2009/05/o-problema-do-barbeiro-dorminhoco-com_07.html

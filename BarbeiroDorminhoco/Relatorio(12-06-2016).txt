@@ -1,0 +1,10 @@
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 20
+
+-----------------------------
+
+Fechando Barbearia
+

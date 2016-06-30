@@ -1,0 +1,18 @@
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 3
+
+-----------------------------
+
+Barbeiro dormindo
+Cliente criado[0]
+Barbeiro acordado
+Cliente criado[1]
+Barbeiro em atendimento
+Cliente criado[2]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Fechando Barbearia
+

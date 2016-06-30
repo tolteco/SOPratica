@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  *
  * @author Maycon
  */
-public class BarbeiroDorminhoco implements Runnable {
+public class BarbeiroDorminhoco extends Thread implements Runnable {
 
     /**
      * @param args the command line arguments
@@ -47,19 +47,26 @@ public class BarbeiroDorminhoco implements Runnable {
             cadeiras = input.nextInt();
             System.out.println("Quantos clientes deverao aparecer para cortar o cabelo?");
             clientes = input.nextInt();
-            executor = Executors.newCachedThreadPool();
+            //executor = Executors.newCachedThreadPool();
             System.out.println("Abrindo Barbearia");
             writer.println("Abrindo Barbearia\n");
             writer.println("Cadeiras de espera: " + cadeiras + "\n");
             writer.println("Clientes ate finalizacao: " + clientes + "\n");
             writer.println("-----------------------------\n");
+            /**
             for (int i = 0; i < 2; i++) {
                 executor.execute(new BarbeiroDorminhoco());
             }
+            **/
+            BarbeiroDorminhoco a = new BarbeiroDorminhoco();
+            Thread t1 = new Thread (new BarbeiroDorminhoco(a));
+            t1.start();
+            Thread t2 = new Thread (new BarbeiroDorminhoco(a));
+            t2.start();
             while (aberto == true) {
                 //Nao faz nada
             }
-            executor.shutdown();
+            //executor.shutdown();
             System.out.println("Fechando Barbearia");
             writer.println("Fechando Barbearia\n");
             writer.close();
@@ -86,6 +93,12 @@ public class BarbeiroDorminhoco implements Runnable {
             return false;
         }//Finalização de inicialização de escritor
         return true;
+    }
+
+    private BarbeiroDorminhoco(BarbeiroDorminhoco a) {
+    }
+
+    private BarbeiroDorminhoco() {
     }
 
     /**

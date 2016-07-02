@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Pacote Main, inicia Threads, escritor de relatorio e random
  */
 package barbearia;
 
@@ -14,21 +12,28 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Maycon
- */
-public class Main extends Thread{
+public class Main extends Thread {
 
-    static String namefile = "Relatorio(" + (new SimpleDateFormat("dd-MM-yyyy").format(new Date())) + ").txt";
-    static File file;
-    static PrintWriter writer;
-    static Random randomGenerator;
-    static ExecutorService executor;
+    static String namefile = "Relatorio(" + (new SimpleDateFormat("dd-MM-yyyy").format(new Date())) + ").txt" /**
+             * @param namefile Usado para criar arquivo com o nome do relatorio
+             */
+            ;
+    static File file /**
+             * @param file Ponteiro para o arquivo
+             */
+            ;
+    static PrintWriter writer /**
+             * @param writer Ponteiro para escritor java em arquivo
+             */
+            ;
+    static Random randomGenerator /**
+             * @param randomGenerator Gerador aleatorio usado nos tempos de
+             * atendimento e entre criacao de clientes
+             */
+            ;
 
     public static void main(String[] args) throws InterruptedException {
         Barbearia barbearia = new Barbearia();
@@ -42,37 +47,22 @@ public class Main extends Thread{
             barbearia.cadeiras = input.nextInt();
             System.out.println("Quantos clientes deverao aparecer para cortar o cabelo?");
             barbearia.clientes = input.nextInt();
-            //executor = Executors.newCachedThreadPool();
+            //Escreve cabecalho em arquivo
             System.out.println("Abrindo Barbearia");
             writer.println("Abrindo Barbearia\n");
             writer.println("Cadeiras de espera: " + barbearia.cadeiras + "\n");
             writer.println("Clientes ate finalizacao: " + barbearia.clientes + "\n");
             writer.println("-----------------------------\n");
-            /**
-             * for (int i = 0; i < 2; i++) { executor.execute(new
-             * BarbeiroDorminhoco()); }
-            *
-             */
-            //Barbeiro b = new Barbeiro(barbearia);
-            //GeradorClientes g = new GeradorClientes(barbearia);
-            Thread b = new Thread (new Barbeiro(barbearia));
-            Thread g = new Thread (new GeradorClientes(barbearia));
-            b.start();
+            Thread b = new Thread(new Barbeiro(barbearia));
+            Thread g = new Thread(new GeradorClientes(barbearia));
+            b.start(); //Inicia Threads
             g.start();
-            while (barbearia.aberto == true) {
-                System.out.print("");
-            }
-            //executor.shutdown();
-            System.out.println("Fechando Barbearia");
-            writer.println("Fechando Barbearia\n");
-            writer.close();
         }
     }
 
     /**
      * Inicia os atributos para escrever relatorio em txt
-     *
-     * @return
+     * @return Se nenhum erro ocorreu
      */
     public static boolean EscreveRelatorio() {
         String A = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
@@ -90,5 +80,5 @@ public class Main extends Thread{
         }//Finalização de inicialização de escritor
         return true;
     }
-    
+
 }

@@ -17,6 +17,7 @@ public class Barbeiro extends Thread implements Runnable {
     private final MainFrame MainF;
     
     private final int MAX_TIME;
+    private final int MIN_TIME;
     private final boolean useMilis;
     
     public static double atendimentoTime;
@@ -51,11 +52,14 @@ public class Barbeiro extends Thread implements Runnable {
             logToStream = false;
         }
         
-        if (mode == 3){                //Modo 3: Gerador rápido:
+        if (mode==3 || mode==4 || mode==5){                  //Modo 3: Gerador rápido:
             MAX_TIME = MAGICAL_TIME*3; //Ao invés do gerador ser mais rápido,
         } else {                       //o barbeiro é mais lento.
             MAX_TIME = MAGICAL_TIME;
         }
+        
+        if (mode==4 || mode==5) MIN_TIME = MAGICAL_TIME;
+        else MIN_TIME=0;
         this.useMilis = useMilis;
     }
     
@@ -74,6 +78,7 @@ public class Barbeiro extends Thread implements Runnable {
                     System.out.println("Fechando Barbearia");
                 Main.writer.println("Fechando Barbearia\n");
                 Main.writer.close();
+                MainF.setBarberState(0);
             }
             Thread.yield(); //Forca a troca de contexto
         }
@@ -84,7 +89,7 @@ public class Barbeiro extends Thread implements Runnable {
      * se estivesse atendendo)
      */
     public void atendimento() {
-        int randomInt = (Main.randomGenerator.nextInt(MAX_TIME));
+        int randomInt = (Main.randomGenerator.nextInt(MAX_TIME)) + MIN_TIME;
         atendimentoTime = randomInt;
         try {
             if (useMilis)

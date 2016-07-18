@@ -101,7 +101,7 @@ public class Barbearia {
                 else
                     System.out.println("Barbeiro atendendo");
                 Main.writer.println("Barbeiro em atendimento");
-                
+                MainF.setBarberState(1);
                 if (filaC.size() > 0){
                     cliente = filaC.remove(0);
                     cliente.setTempoAtendimento(Barbeiro.atendimentoTime); //Add para o último cliente, o último tempo.
@@ -109,6 +109,7 @@ public class Barbearia {
                 }
             } else {
                 try {
+                    MainF.setBarberState(0);
                     Main.writer.println("Barbeiro dormindo");
                     bd = true; //Barbeiro dormiu
                     wait();
@@ -157,11 +158,13 @@ public class Barbearia {
     }
     
     private void revalidateMainFrame(){
-        //java.awt.EventQueue.invokeLater(() -> {
-            MainF.fillAtendidos(atendidos);
-            MainF.fillFila(filaC);
-            MainF.fillNaoAtendidos(clientesNaoAtendidos);
+        MainF.fillAtendidos(atendidos);
+        MainF.fillFila(filaC);
+        MainF.fillNaoAtendidos(clientesNaoAtendidos);
+        /*if (t == true){
+            MainF.setBarberState(1);
+        } else {
             MainF.setBarberState(0);
-        //});
+        }*/
     }
 }

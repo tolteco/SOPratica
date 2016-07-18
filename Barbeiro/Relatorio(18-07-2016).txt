@@ -9,136 +9,10 @@ Clientes ate finalizacao: 10
 Barbeiro dormindo
 Cliente criado[0]
 Barbeiro acordado
-Barbeiro em atendimento
 Cliente criado[1]
-Cliente criado[2]
-Cliente criado[3]
-Cliente criado[4]
-Cliente criado[5]
-Barbeiro em atendimento
-Cliente criado[6]
-Fila cheia
-Fila cheia
-Fila cheia
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Cliente criado[1]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[2]
-Cliente criado[3]
-Cliente criado[4]
-Cliente criado[5]
-Fila cheia
-Barbeiro em atendimento
-Cliente criado[7]
-Fila cheia
-Fila cheia
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Cliente criado[0]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[1]
-Barbeiro acordado
 Barbeiro em atendimento
 Cliente criado[2]
 Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[3]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[4]
-Cliente criado[5]
-Cliente criado[6]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[7]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[8]
-Cliente criado[9]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Cliente criado[0]
-Barbeiro em atendimento
-Cliente criado[1]
-Cliente criado[2]
-Cliente criado[3]
-Cliente criado[4]
-Cliente criado[5]
-Fila cheia
-Fila cheia
-Fila cheia
-Fila cheia
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[1]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[2]
 Barbeiro em atendimento
 Barbeiro dormindo
 Cliente criado[3]
@@ -148,124 +22,16 @@ Barbeiro dormindo
 Cliente criado[4]
 Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[5]
-Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
 Cliente criado[6]
 Barbeiro acordado
 Barbeiro em atendimento
-Cliente criado[7]
-Barbeiro em atendimento
-Cliente criado[8]
-Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[9]
-Barbeiro acordado
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Cliente criado[1]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[2]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[3]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[4]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[5]
-Cliente criado[6]
-Cliente criado[7]
-Barbeiro em atendimento
-Cliente criado[8]
-Cliente criado[9]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[1]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[2]
-Barbeiro acordado
-Cliente criado[3]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[4]
-Cliente criado[5]
-Cliente criado[6]
-Barbeiro em atendimento
-Cliente criado[7]
-Barbeiro em atendimento
-Cliente criado[8]
-Cliente criado[9]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 10
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[1]
-Cliente criado[2]
-Cliente criado[3]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[4]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[5]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[6]
-Barbeiro em atendimento
 Cliente criado[7]
 Cliente criado[8]
+Barbeiro acordado
 Cliente criado[9]
 Barbeiro em atendimento
 Barbeiro em atendimento
@@ -280,29 +46,24 @@ Clientes ate finalizacao: 10
 
 -----------------------------
 
-Barbeiro dormindo
 Cliente criado[0]
 Cliente criado[1]
-Cliente criado[2]
-Barbeiro acordado
 Barbeiro em atendimento
+Cliente criado[2]
 Cliente criado[3]
 Barbeiro em atendimento
 Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[4]
-Cliente criado[5]
-Barbeiro acordado
 Barbeiro em atendimento
+Cliente criado[5]
 Cliente criado[6]
 Cliente criado[7]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
 Cliente criado[8]
+Fila cheia
 Barbeiro em atendimento
-Cliente criado[9]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
 Barbeiro em atendimento
 Fechando Barbearia
 
@@ -319,38 +80,6 @@ Cliente criado[0]
 Barbeiro acordado
 Cliente criado[1]
 Barbeiro em atendimento
-Cliente criado[2]
-Barbeiro em atendimento
-Cliente criado[3]
-Barbeiro em atendimento
-Cliente criado[4]
-Cliente criado[5]
-Cliente criado[6]
-Cliente criado[7]
-Fila cheia
-Fila cheia
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 15
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[1]
-Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
 Cliente criado[2]
@@ -363,10 +92,8 @@ Barbeiro em atendimento
 Barbeiro dormindo
 Cliente criado[4]
 Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[5]
-Barbeiro acordado
+Barbeiro em atendimento
 Barbeiro em atendimento
 Barbeiro dormindo
 Cliente criado[6]
@@ -384,3208 +111,376 @@ Barbeiro dormindo
 Cliente criado[9]
 Barbeiro acordado
 Barbeiro em atendimento
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
+Cliente criado[0]
+Barbeiro em atendimento
+Cliente criado[1]
+Barbeiro em atendimento
 Barbeiro dormindo
+Cliente criado[2]
+Cliente criado[3]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[4]
+Cliente criado[5]
+Cliente criado[6]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Cliente criado[7]
+Cliente criado[8]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
+Cliente criado[9]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
+Barbeiro dormindo
+Cliente criado[0]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[1]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[2]
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[3]
+Cliente criado[4]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[5]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[6]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[7]
+Barbeiro em atendimento
+Cliente criado[8]
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[9]
+Barbeiro acordado
+Barbeiro em atendimento
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
+Barbeiro dormindo
+Cliente criado[0]
+Barbeiro acordado
+Cliente criado[1]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[2]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[3]
+Cliente criado[4]
+Cliente criado[5]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Cliente criado[6]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[7]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[8]
+Cliente criado[9]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
+Barbeiro dormindo
+Cliente criado[0]
+Cliente criado[1]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[2]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[3]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[4]
+Cliente criado[5]
+Cliente criado[6]
+Barbeiro em atendimento
+Cliente criado[7]
+Barbeiro em atendimento
+Cliente criado[8]
+Barbeiro em atendimento
+Cliente criado[9]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 50
+
+-----------------------------
+
+Barbeiro dormindo
+Cliente criado[0]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[1]
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[2]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[3]
+Cliente criado[4]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[5]
+Barbeiro acordado
+Barbeiro em atendimento
+Cliente criado[6]
+Barbeiro em atendimento
+Cliente criado[7]
+Cliente criado[8]
+Cliente criado[9]
+Barbeiro em atendimento
+Barbeiro em atendimento
 Cliente criado[10]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
 Cliente criado[11]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[12]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[13]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[14]
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 5
-
-Clientes ate finalizacao: 15
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[1]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[2]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[3]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[4]
-Barbeiro acordado
-Cliente criado[5]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[6]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[7]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[8]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[9]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[10]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[11]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[12]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[13]
-Barbeiro acordado
-Cliente criado[14]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Fechando Barbearia
-
-Abrindo Barbearia
-
-Cadeiras de espera: 100
-
-Clientes ate finalizacao: 1000
-
------------------------------
-
-Barbeiro dormindo
-Cliente criado[0]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[1]
-Cliente criado[2]
-Cliente criado[3]
-Cliente criado[4]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[5]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[6]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[7]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[8]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[9]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[10]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[11]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[12]
-Barbeiro acordado
-Barbeiro em atendimento
 Cliente criado[13]
 Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[14]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Cliente criado[14]
 Cliente criado[15]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[16]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[17]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[18]
-Barbeiro acordado
-Barbeiro em atendimento
 Cliente criado[19]
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[20]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
+Barbeiro em atendimento
 Cliente criado[21]
-Barbeiro acordado
+Cliente criado[22]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[22]
 Cliente criado[23]
 Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[24]
-Barbeiro acordado
 Barbeiro em atendimento
 Cliente criado[25]
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[26]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[27]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[28]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[29]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
+Barbeiro em atendimento
 Cliente criado[30]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[31]
-Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
 Cliente criado[32]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[33]
-Barbeiro acordado
 Cliente criado[34]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[35]
 Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
 Cliente criado[36]
-Cliente criado[37]
-Barbeiro acordado
-Barbeiro em atendimento
 Barbeiro em atendimento
 Barbeiro dormindo
+Cliente criado[37]
 Cliente criado[38]
 Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[39]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[40]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[41]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[42]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
 Cliente criado[43]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
 Cliente criado[44]
-Cliente criado[45]
-Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro em atendimento
 Barbeiro dormindo
+Cliente criado[45]
 Cliente criado[46]
 Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[47]
-Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro dormindo
+Barbeiro em atendimento
 Cliente criado[48]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
 Cliente criado[49]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[50]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[51]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[52]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[53]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[54]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[55]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[56]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[57]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[58]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[59]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[60]
-Cliente criado[61]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[62]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[63]
-Cliente criado[64]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[65]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[66]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[67]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[68]
-Cliente criado[69]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[70]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[71]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[72]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[73]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[74]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[75]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[76]
-Barbeiro em atendimento
-Cliente criado[77]
-Barbeiro em atendimento
-Cliente criado[78]
-Cliente criado[79]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[80]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[81]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[82]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[83]
-Cliente criado[84]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[85]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[86]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[87]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[88]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[89]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[90]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[91]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[92]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[93]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[94]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[95]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[96]
-Barbeiro acordado
-Cliente criado[97]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[98]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[99]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[100]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[101]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[102]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[103]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[104]
-Barbeiro acordado
-Cliente criado[105]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[106]
-Cliente criado[107]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[108]
-Cliente criado[109]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[110]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[111]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[112]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[113]
-Barbeiro acordado
-Cliente criado[114]
-Barbeiro em atendimento
-Cliente criado[115]
-Barbeiro em atendimento
-Cliente criado[116]
-Barbeiro em atendimento
-Cliente criado[117]
-Cliente criado[118]
-Cliente criado[119]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[120]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[121]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[122]
-Cliente criado[123]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[124]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[125]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[126]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[127]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[128]
-Barbeiro acordado
-Cliente criado[129]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[130]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[131]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[132]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[133]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[134]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[135]
-Barbeiro em atendimento
-Cliente criado[136]
-Barbeiro em atendimento
-Cliente criado[137]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[138]
-Cliente criado[139]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[140]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[141]
-Cliente criado[142]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[143]
-Cliente criado[144]
-Cliente criado[145]
-Cliente criado[146]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[147]
-Cliente criado[148]
-Barbeiro em atendimento
-Cliente criado[149]
-Barbeiro em atendimento
-Cliente criado[150]
-Barbeiro em atendimento
-Cliente criado[151]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[152]
-Cliente criado[153]
-Barbeiro em atendimento
-Cliente criado[154]
-Cliente criado[155]
-Cliente criado[156]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[157]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[158]
-Barbeiro em atendimento
-Cliente criado[159]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[160]
-Barbeiro acordado
-Cliente criado[161]
-Barbeiro em atendimento
-Cliente criado[162]
-Barbeiro em atendimento
-Cliente criado[163]
-Cliente criado[164]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[165]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[166]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[167]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[168]
-Cliente criado[169]
-Barbeiro em atendimento
-Cliente criado[170]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[171]
-Barbeiro em atendimento
-Cliente criado[172]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[173]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[174]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[175]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[176]
-Cliente criado[177]
-Barbeiro em atendimento
-Cliente criado[178]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[179]
-Barbeiro acordado
-Cliente criado[180]
-Barbeiro em atendimento
-Cliente criado[181]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[182]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[183]
-Cliente criado[184]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[185]
-Barbeiro em atendimento
-Cliente criado[186]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[187]
-Cliente criado[188]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[189]
-Cliente criado[190]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[191]
-Cliente criado[192]
-Barbeiro em atendimento
-Cliente criado[193]
-Barbeiro em atendimento
-Cliente criado[194]
-Barbeiro em atendimento
-Cliente criado[195]
-Cliente criado[196]
-Cliente criado[197]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[198]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[199]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[200]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[201]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[202]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[203]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[204]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[205]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[206]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[207]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[208]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[209]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[210]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[211]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[212]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[213]
-Barbeiro em atendimento
-Cliente criado[214]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[215]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[216]
-Barbeiro acordado
-Cliente criado[217]
-Barbeiro em atendimento
-Cliente criado[218]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[219]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[220]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[221]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[222]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[223]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[224]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[225]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[226]
-Cliente criado[227]
-Cliente criado[228]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[229]
-Cliente criado[230]
-Barbeiro em atendimento
-Cliente criado[231]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[232]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[233]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[234]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[235]
-Cliente criado[236]
-Cliente criado[237]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[238]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[239]
-Barbeiro em atendimento
-Cliente criado[240]
-Cliente criado[241]
-Barbeiro em atendimento
-Cliente criado[242]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[243]
-Cliente criado[244]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[245]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[246]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[247]
-Cliente criado[248]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[249]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[250]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[251]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[252]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[253]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[254]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[255]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[256]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[257]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[258]
-Barbeiro acordado
-Cliente criado[259]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[260]
-Cliente criado[261]
-Cliente criado[262]
-Cliente criado[263]
-Cliente criado[264]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[265]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[266]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[267]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[268]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[269]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[270]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[271]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[272]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[273]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[274]
-Cliente criado[275]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[276]
-Barbeiro acordado
-Cliente criado[277]
-Barbeiro em atendimento
-Cliente criado[278]
-Barbeiro em atendimento
-Cliente criado[279]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[280]
-Barbeiro em atendimento
-Cliente criado[281]
-Cliente criado[282]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[283]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[284]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[285]
-Barbeiro acordado
-Cliente criado[286]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[287]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[288]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[289]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[290]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[291]
-Cliente criado[292]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[293]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[294]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[295]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[296]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[297]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[298]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[299]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[300]
-Barbeiro acordado
-Cliente criado[301]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[302]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[303]
-Cliente criado[304]
-Cliente criado[305]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[306]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[307]
-Barbeiro acordado
-Cliente criado[308]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[309]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[310]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[311]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[312]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[313]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[314]
-Barbeiro acordado
-Cliente criado[315]
-Barbeiro em atendimento
-Cliente criado[316]
-Cliente criado[317]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[318]
-Cliente criado[319]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[320]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[321]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[322]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[323]
-Cliente criado[324]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[325]
-Barbeiro acordado
-Cliente criado[326]
-Barbeiro em atendimento
-Cliente criado[327]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[328]
-Barbeiro em atendimento
-Cliente criado[329]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[330]
-Barbeiro acordado
-Cliente criado[331]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[332]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[333]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[334]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[335]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[336]
-Cliente criado[337]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[338]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[339]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[340]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[341]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[342]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[343]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[344]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[345]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[346]
-Cliente criado[347]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[348]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[349]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[350]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[351]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[352]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[353]
-Cliente criado[354]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[355]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[356]
-Barbeiro acordado
-Cliente criado[357]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[358]
-Cliente criado[359]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[360]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[361]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[362]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[363]
-Cliente criado[364]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[365]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[366]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[367]
-Barbeiro em atendimento
-Cliente criado[368]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[369]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[370]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[371]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[372]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[373]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[374]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[375]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[376]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[377]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[378]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[379]
-Barbeiro acordado
-Cliente criado[380]
-Barbeiro em atendimento
-Cliente criado[381]
-Cliente criado[382]
-Cliente criado[383]
-Cliente criado[384]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[385]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[386]
-Barbeiro em atendimento
-Cliente criado[387]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[388]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[389]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[390]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[391]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[392]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[393]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[394]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[395]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[396]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[397]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[398]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[399]
-Barbeiro em atendimento
-Cliente criado[400]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[401]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[402]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[403]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[404]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[405]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[406]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[407]
-Barbeiro acordado
-Cliente criado[408]
-Barbeiro em atendimento
-Cliente criado[409]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[410]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[411]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[412]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[413]
-Cliente criado[414]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[415]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[416]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[417]
-Cliente criado[418]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[419]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[420]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[421]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[422]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[423]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[424]
-Barbeiro acordado
-Cliente criado[425]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[426]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[427]
-Barbeiro acordado
-Cliente criado[428]
-Barbeiro em atendimento
-Cliente criado[429]
-Barbeiro em atendimento
-Cliente criado[430]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[431]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[432]
-Cliente criado[433]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[434]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[435]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[436]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[437]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[438]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[439]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[440]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[441]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[442]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[443]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[444]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[445]
-Cliente criado[446]
-Cliente criado[447]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[448]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[449]
-Cliente criado[450]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[451]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[452]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[453]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[454]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[455]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[456]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[457]
-Cliente criado[458]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[459]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[460]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[461]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[462]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[463]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[464]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[465]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[466]
-Cliente criado[467]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[468]
-Cliente criado[469]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[470]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[471]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[472]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[473]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[474]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[475]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[476]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[477]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[478]
-Cliente criado[479]
-Cliente criado[480]
-Cliente criado[481]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[482]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[483]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[484]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[485]
-Cliente criado[486]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[487]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[488]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[489]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[490]
-Barbeiro em atendimento
-Cliente criado[491]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[492]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[493]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[494]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[495]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[496]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[497]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[498]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[499]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[500]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[501]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[502]
-Cliente criado[503]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[504]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[505]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[506]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[507]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[508]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[509]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[510]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[511]
-Barbeiro em atendimento
-Cliente criado[512]
-Cliente criado[513]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[514]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[515]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[516]
-Cliente criado[517]
-Cliente criado[518]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[519]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[520]
-Barbeiro em atendimento
-Cliente criado[521]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[522]
-Barbeiro em atendimento
-Cliente criado[523]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[524]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[525]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[526]
-Barbeiro em atendimento
-Cliente criado[527]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[528]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[529]
-Barbeiro acordado
-Cliente criado[530]
-Barbeiro em atendimento
-Cliente criado[531]
-Cliente criado[532]
-Cliente criado[533]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[534]
-Barbeiro em atendimento
-Cliente criado[535]
-Barbeiro em atendimento
-Cliente criado[536]
-Barbeiro em atendimento
-Cliente criado[537]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[538]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[539]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[540]
-Cliente criado[541]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[542]
-Barbeiro em atendimento
-Cliente criado[543]
-Barbeiro em atendimento
-Cliente criado[544]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[545]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[546]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[547]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[548]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[549]
-Cliente criado[550]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[551]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[552]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[553]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[554]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[555]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[556]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[557]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[558]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[559]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[560]
-Barbeiro acordado
-Cliente criado[561]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[562]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[563]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[564]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[565]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[566]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[567]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[568]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[569]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[570]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[571]
-Cliente criado[572]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[573]
-Barbeiro em atendimento
-Cliente criado[574]
-Barbeiro em atendimento
-Cliente criado[575]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[576]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[577]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[578]
-Barbeiro em atendimento
-Cliente criado[579]
-Barbeiro em atendimento
-Cliente criado[580]
-Cliente criado[581]
-Cliente criado[582]
-Barbeiro em atendimento
-Cliente criado[583]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[584]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[585]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[586]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[587]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[588]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[589]
-Cliente criado[590]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[591]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[592]
-Cliente criado[593]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[594]
-Cliente criado[595]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[596]
-Cliente criado[597]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[598]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[599]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[600]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[601]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[602]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[603]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[604]
-Cliente criado[605]
-Cliente criado[606]
-Barbeiro em atendimento
-Cliente criado[607]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[608]
-Barbeiro em atendimento
-Cliente criado[609]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[610]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[611]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[612]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[613]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[614]
-Cliente criado[615]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[616]
-Barbeiro acordado
-Cliente criado[617]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[618]
-Cliente criado[619]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[620]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[621]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[622]
-Cliente criado[623]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[624]
-Cliente criado[625]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[626]
-Barbeiro acordado
-Cliente criado[627]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[628]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[629]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[630]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[631]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[632]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[633]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[634]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[635]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[636]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[637]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[638]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[639]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[640]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[641]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[642]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[643]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[644]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[645]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[646]
-Cliente criado[647]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[648]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[649]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[650]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[651]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[652]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[653]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[654]
-Cliente criado[655]
-Cliente criado[656]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[657]
-Cliente criado[658]
-Cliente criado[659]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[660]
-Barbeiro em atendimento
-Cliente criado[661]
-Cliente criado[662]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[663]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[664]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[665]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[666]
-Barbeiro acordado
-Cliente criado[667]
-Barbeiro em atendimento
-Cliente criado[668]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[669]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[670]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[671]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[672]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[673]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[674]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[675]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[676]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[677]
-Cliente criado[678]
-Barbeiro em atendimento
-Cliente criado[679]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[680]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[681]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[682]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[683]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[684]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[685]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[686]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[687]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[688]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[689]
-Barbeiro em atendimento
-Cliente criado[690]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[691]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[692]
-Barbeiro acordado
-Cliente criado[693]
-Barbeiro em atendimento
-Cliente criado[694]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[695]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[696]
-Cliente criado[697]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[698]
-Barbeiro em atendimento
-Cliente criado[699]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[700]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[701]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[702]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[703]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[704]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[705]
-Cliente criado[706]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[707]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[708]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[709]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[710]
-Cliente criado[711]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[712]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[713]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[714]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[715]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[716]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[717]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[718]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[719]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[720]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[721]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[722]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[723]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[724]
-Cliente criado[725]
-Cliente criado[726]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[727]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[728]
-Barbeiro em atendimento
-Cliente criado[729]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[730]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[731]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[732]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[733]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[734]
-Cliente criado[735]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[736]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[737]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[738]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[739]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[740]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[741]
-Barbeiro em atendimento
-Cliente criado[742]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[743]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[744]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[745]
-Cliente criado[746]
-Barbeiro acordado
-Cliente criado[747]
-Barbeiro em atendimento
-Cliente criado[748]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[749]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[750]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[751]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[752]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[753]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[754]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[755]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[756]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[757]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[758]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[759]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[760]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[761]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[762]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[763]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[764]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[765]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[766]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[767]
-Barbeiro acordado
-Cliente criado[768]
-Barbeiro em atendimento
-Cliente criado[769]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[770]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[771]
-Cliente criado[772]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[773]
-Barbeiro acordado
-Cliente criado[774]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[775]
-Cliente criado[776]
-Barbeiro acordado
-Cliente criado[777]
-Barbeiro em atendimento
-Cliente criado[778]
-Barbeiro em atendimento
-Cliente criado[779]
-Cliente criado[780]
-Barbeiro em atendimento
-Cliente criado[781]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[782]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[783]
-Cliente criado[784]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[785]
-Barbeiro em atendimento
-Cliente criado[786]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[787]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[788]
-Cliente criado[789]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[790]
-Barbeiro em atendimento
-Cliente criado[791]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[792]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[793]
-Cliente criado[794]
-Barbeiro acordado
-Cliente criado[795]
-Barbeiro em atendimento
-Cliente criado[796]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[797]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[798]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[799]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[800]
-Cliente criado[801]
-Barbeiro em atendimento
-Cliente criado[802]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[803]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[804]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[805]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[806]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[807]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[808]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[809]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[810]
-Barbeiro acordado
-Cliente criado[811]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[812]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[813]
-Barbeiro acordado
-Cliente criado[814]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[815]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[816]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[817]
-Barbeiro em atendimento
-Cliente criado[818]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[819]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[820]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[821]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[822]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[823]
-Cliente criado[824]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[825]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[826]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[827]
-Barbeiro em atendimento
-Cliente criado[828]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[829]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[830]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[831]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[832]
-Cliente criado[833]
-Cliente criado[834]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[835]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[836]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[837]
-Barbeiro em atendimento
-Cliente criado[838]
-Barbeiro em atendimento
-Cliente criado[839]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[840]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[841]
-Cliente criado[842]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[843]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[844]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[845]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[846]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[847]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[848]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[849]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[850]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[851]
-Barbeiro em atendimento
-Cliente criado[852]
-Barbeiro em atendimento
-Cliente criado[853]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[854]
-Cliente criado[855]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[856]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[857]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[858]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[859]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[860]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[861]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[862]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[863]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[864]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[865]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[866]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[867]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[868]
-Barbeiro acordado
-Cliente criado[869]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[870]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[871]
-Cliente criado[872]
-Cliente criado[873]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[874]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[875]
-Barbeiro acordado
-Cliente criado[876]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[877]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[878]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[879]
-Barbeiro acordado
-Cliente criado[880]
-Cliente criado[881]
-Cliente criado[882]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[883]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[884]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[885]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[886]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[887]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[888]
-Barbeiro acordado
-Cliente criado[889]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[890]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[891]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[892]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[893]
-Cliente criado[894]
-Cliente criado[895]
-Cliente criado[896]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[897]
-Barbeiro em atendimento
-Cliente criado[898]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[899]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[900]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[901]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[902]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[903]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[904]
-Cliente criado[905]
-Barbeiro em atendimento
-Cliente criado[906]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[907]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[908]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[909]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[910]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[911]
-Barbeiro em atendimento
-Cliente criado[912]
-Barbeiro em atendimento
-Cliente criado[913]
-Barbeiro em atendimento
-Cliente criado[914]
-Cliente criado[915]
-Barbeiro em atendimento
-Cliente criado[916]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[917]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[918]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[919]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[920]
-Cliente criado[921]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[922]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[923]
-Barbeiro acordado
-Cliente criado[924]
-Barbeiro em atendimento
-Cliente criado[925]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[926]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[927]
-Barbeiro em atendimento
-Cliente criado[928]
-Barbeiro em atendimento
-Cliente criado[929]
-Cliente criado[930]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[931]
-Barbeiro acordado
-Cliente criado[932]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[933]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[934]
-Cliente criado[935]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro em atendimento
-Cliente criado[936]
-Cliente criado[937]
-Barbeiro em atendimento
-Cliente criado[938]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[939]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[940]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[941]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[942]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[943]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[944]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[945]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[946]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[947]
-Barbeiro em atendimento
-Cliente criado[948]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[949]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[950]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[951]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[952]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[953]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[954]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[955]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[956]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[957]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[958]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[959]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[960]
-Barbeiro acordado
-Cliente criado[961]
-Barbeiro em atendimento
 Barbeiro em atendimento
-Cliente criado[962]
 Barbeiro em atendimento
+Fechando Barbearia
+
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
 Barbeiro dormindo
-Cliente criado[963]
+Cliente criado[0]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[964]
+Cliente criado[1]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[965]
+Cliente criado[2]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[966]
+Cliente criado[3]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[967]
+Cliente criado[4]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[968]
-Cliente criado[969]
+Cliente criado[5]
 Barbeiro acordado
 Barbeiro em atendimento
-Cliente criado[970]
-Cliente criado[971]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[972]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[973]
-Barbeiro acordado
-Cliente criado[974]
-Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[975]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[976]
-Barbeiro acordado
-Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[977]
+Cliente criado[6]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[978]
+Cliente criado[7]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[979]
+Cliente criado[8]
 Barbeiro acordado
-Cliente criado[980]
 Barbeiro em atendimento
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[981]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[982]
-Barbeiro acordado
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[983]
-Barbeiro acordado
-Barbeiro em atendimento
-Cliente criado[984]
-Barbeiro em atendimento
-Barbeiro dormindo
-Cliente criado[985]
-Barbeiro acordado
-Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[986]
+Cliente criado[9]
 Barbeiro acordado
 Barbeiro em atendimento
+Fechando Barbearia
+
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
 Barbeiro dormindo
-Cliente criado[987]
-Cliente criado[988]
+Cliente criado[0]
 Barbeiro acordado
 Barbeiro em atendimento
-Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[989]
+Cliente criado[1]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[990]
+Cliente criado[2]
 Barbeiro acordado
-Cliente criado[991]
 Barbeiro em atendimento
-Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[992]
+Cliente criado[3]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[993]
+Cliente criado[4]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[994]
+Cliente criado[5]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[995]
+Cliente criado[6]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[996]
+Cliente criado[7]
 Barbeiro acordado
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[997]
+Cliente criado[8]
 Barbeiro acordado
-Cliente criado[998]
-Barbeiro em atendimento
 Barbeiro em atendimento
 Barbeiro dormindo
-Cliente criado[999]
+Cliente criado[9]
 Barbeiro acordado
 Barbeiro em atendimento
 Fechando Barbearia

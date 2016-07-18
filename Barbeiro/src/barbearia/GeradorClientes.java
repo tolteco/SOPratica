@@ -16,6 +16,7 @@ public class GeradorClientes extends Thread implements Runnable {
     private final boolean logToStream;
     
     private final int MAX_TIME;
+    private final int MIN_TIME;
     private final boolean useMilis;
     
     Barbearia barbearia /**
@@ -39,11 +40,14 @@ public class GeradorClientes extends Thread implements Runnable {
         LOG.addHandler(hnd);
         LOG.setUseParentHandlers(false);*/
         
-        if (mode == 2){                //Modo 2: Barbeiro rápido:
+        if (mode==2 || mode==4 || mode==6){                //Modo 2: Barbeiro rápido:
             MAX_TIME = MAGICAL_TIME*3; //Ao invés do barbeiro ser mais rápido,
         } else {                       //o gerador é mais lento.
             MAX_TIME = MAGICAL_TIME;
         }
+        
+        if (mode==4 || mode==6) MIN_TIME = MAGICAL_TIME;
+        else MIN_TIME=0;
         this.useMilis = useMilis;
     }
     
@@ -51,7 +55,7 @@ public class GeradorClientes extends Thread implements Runnable {
     public void run() {
         for (int i = 0; i < barbearia.clientes; i++) {
             //int randomInt = 0; //Descomentar essa linha e comentar a abaixo se for pra fazer tudo correndo
-            int randomInt = (randomGenerator.nextInt(MAX_TIME));
+            int randomInt = (randomGenerator.nextInt(MAX_TIME)) + MIN_TIME;
             try { //Escolhe um tempo para a entrada entre um cliente e outro
                 if (useMilis)
                     TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos

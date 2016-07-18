@@ -6,12 +6,20 @@
 package barbearia;
 
 import static barbearia.Main.writer;
-import java.util.Random;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import so.barbeiro.view.MainFrame;
 
 public class Barbearia {
-
+    private static final Logger LOG = MainFrame.LOG;
+    private final boolean logToStream;
+    private final MainFrame MainF;
+    
+    private ArrayList<Cliente> clientesNaoAtendidos = new ArrayList();
+    private ArrayList<Cliente> filaC = new ArrayList();
+    private ArrayList<Cliente> atendidos = new ArrayList();
+    
     public int cadeiras = 0, fila = 0, clientes = 0 /**
              * @param cadeiras  Quantidade de cadeiras na barbearia
              * @param fila      Tamanho da fila (cadeiras ocupadas)
@@ -31,6 +39,24 @@ public class Barbearia {
              */
             ;
 
+    public Barbearia(){
+        this(null);
+    }
+    
+    public Barbearia(MainFrame frame) {
+        this.MainF = frame;
+        if (frame != null){
+            logToStream = true;
+            //PaneHandler hnd = new PaneHandler(new BufferedPaneOutputStream(console));
+            //LOG.addHandler(hnd);
+            //LOG.setUseParentHandlers(false);
+        } else {
+            logToStream = false;
+        }
+    }
+
+    
+    
     /**
      * @param k Opcao (1 Gerador de clientes acessando; 2 Barbeiro acessando)
      * @param i Cliente que esta sendo gerado 
@@ -39,14 +65,25 @@ public class Barbearia {
      */
     public synchronized boolean mexefila(int k, int i) {
         sebd = false;
+        Cliente cliente = new Cliente(i);
         if (k == 1) { //Gerador de clientes
             if (fila == cadeiras) {
-                System.out.println("Fila cheia");
+                if (logToStream)
+                    java.awt.EventQueue.invokeLater(() -> { LOG.severe("Fila cheia"); });
+                else
+                    System.out.println("Fila cheia");
                 Main.writer.println("Fila cheia");
+                clientesNaoAtendidos.add(cliente);
             } else {
                 fila++;
-                writer.println("Cliente criado[" + (i + 1) + "]");
-                System.out.println("Cliente criado[" + (i + 1) + "]");
+                StringBuilder sb = new StringBuilder();
+                sb.append("Cliente criado[").append(i).append("]");
+                if (logToStream)
+                    java.awt.EventQueue.invokeLater(() -> {LOG.info(sb.toString());});
+                else
+                    System.out.println(sb.toString());
+                writer.println(sb.toString());
+                filaC.add(cliente);
                 if (bd) {
                     notify(); //Acorda barbeiro
                 }
@@ -55,23 +92,41 @@ public class Barbearia {
             if (fila > 0) {
                 fila--;
                 t = true;
-                System.out.println("Barbeiro atendendo");
+                if (logToStream)
+                    java.awt.EventQueue.invokeLater(() -> {
+                        LOG.info("Barbeiro atendendo");
+                    });
+                    //LOG.info("Barbeiro atendendo");
+                else
+                    System.out.println("Barbeiro atendendo");
                 Main.writer.println("Barbeiro em atendimento");
+                atendidos.add(cliente);
+                if (filaC.size() > 0)
+                        filaC.remove(0);
+                cliente.setTempoAtendimento(Barbeiro.atendimentoTime); //Add para o último cliente, o último tempo.
             } else {
                 try {
                     Main.writer.println("Barbeiro dormindo");
                     bd = true; //Barbeiro dormiu
                     wait();
+                                       
                     bd = false;
                     sebd = true;
-                    System.out.println("Barbeiro acordado");
+                    if (logToStream)
+                        java.awt.EventQueue.invokeLater(() -> { LOG.info("Barbeiro acordado"); });
+                    else
+                        System.out.println("Barbeiro acordado");
                     Main.writer.println("Barbeiro acordado");
+                    
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
-        Imprimevetor(t);
+        if (logToStream)
+            revalidateMainFrame();
+        else
+            Imprimevetor(t);
         return sebd;
     }
 
@@ -96,5 +151,14 @@ public class Barbearia {
         } else {
             System.out.println("  B");
         }
+    }
+    
+    private void revalidateMainFrame(){
+        //java.awt.EventQueue.invokeLater(() -> {
+            MainF.fillAtendidos(atendidos);
+            MainF.fillFila(filaC);
+            MainF.fillNaoAtendidos(clientesNaoAtendidos);
+            MainF.setBarberState(0);
+        //});
     }
 }

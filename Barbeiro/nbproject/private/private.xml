@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/GitHub/SOPratica/Barbeiro/src/so/barbeiro/view/PaneHandler.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/SOPratica/Barbeiro/src/so/barbeiro/view/MainFrame.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/SOPratica/Barbeiro/src/so/barbeiro/view/BufferedPaneOutputStream.java</file>
+            <file>file:/C:/Users/Juliano_Felipe/Downloads/SOPratica-master/Barbeiro/src/barbearia/Barbeiro.java</file>
+            <file>file:/C:/Users/Juliano_Felipe/Downloads/SOPratica-master/Barbeiro/src/barbearia/Barbearia.java</file>
+            <file>file:/C:/Users/Juliano_Felipe/Downloads/SOPratica-master/Barbeiro/src/so/barbeiro/view/MainFrame.java</file>
+            <file>file:/C:/Users/Juliano_Felipe/Downloads/SOPratica-master/Barbeiro/src/barbearia/GeradorClientes.java</file>
+            <file>file:/C:/Users/Juliano_Felipe/Downloads/SOPratica-master/Barbeiro/src/barbearia/Cliente.java</file>
         </group>
     </open-files>
 </project-private>

@@ -8,9 +8,15 @@ package barbearia;
 import java.util.concurrent.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import so.barbeiro.view.MainFrame;
 
 public class Barbeiro extends Thread implements Runnable {
-
+    private static final Logger LOG = MainFrame.LOG;
+    private final boolean logToStream;
+    private final MainFrame MainF;
+    
+    public static double atendimentoTime;
+    
     Barbearia barbearia /**
              * @param barbearia E construido com a barbearia para que possa
              * acessar atributos e mexer com funcoes
@@ -25,10 +31,23 @@ public class Barbeiro extends Thread implements Runnable {
      * Construtor de barbeiro
      * @param b Barbearia para construcao
      */
-    Barbeiro(Barbearia b) {
-        barbearia = b;
+    public Barbeiro(Barbearia b) {
+        this(b, null);
     }
 
+    public Barbeiro(Barbearia b, MainFrame frame){
+        barbearia = b;
+        this.MainF = frame;
+        if (frame != null){
+            logToStream = true;
+            /*PaneHandler hnd = new PaneHandler(new BufferedPaneOutputStream(console));
+            LOG.addHandler(hnd);
+            LOG.setUseParentHandlers(false);*/
+        } else {
+            logToStream = false;
+        }
+    }
+    
     @Override
     public void run() {
         while (barbearia.aberto == true) {
@@ -38,7 +57,10 @@ public class Barbeiro extends Thread implements Runnable {
             }
             if (barbearia.fechar == true && barbearia.fila == 0) { //Se gerador de clientes ja parou e barbeiro ja atendeu toda a fila
                 barbearia.aberto = false;
-                System.out.println("Fechando Barbearia");
+                if (logToStream)
+                    java.awt.EventQueue.invokeLater(() -> { LOG.warning("Fechando Barbearia..."); });
+                else
+                    System.out.println("Fechando Barbearia");
                 Main.writer.println("Fechando Barbearia\n");
                 Main.writer.close();
             }
@@ -53,6 +75,7 @@ public class Barbeiro extends Thread implements Runnable {
     public void atendimento() {
         //int randomInt = 0; //Descomentar essa linha e comentar a abaixo se for pra fazer tudo correndo
         int randomInt = (Main.randomGenerator.nextInt(5)) + 1; //Tempo. Atualmente 1 a 6 segundos
+        atendimentoTime = randomInt;
         try {
             TimeUnit.SECONDS.sleep(randomInt);
             //TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos

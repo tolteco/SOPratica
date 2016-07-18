@@ -8,9 +8,12 @@ import static barbearia.Main.*;
 import java.util.concurrent.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import so.barbeiro.view.MainFrame;
 
 public class GeradorClientes extends Thread implements Runnable {
-
+    private static final Logger LOG = MainFrame.LOG;
+    private final boolean logToStream;
+    
     Barbearia barbearia /**
              * @param barbearia E construido com a barbearia para que possa
              * acessar atributos e mexer com funcoes
@@ -21,15 +24,22 @@ public class GeradorClientes extends Thread implements Runnable {
      * Construtor de Gerador
      * @param b Barbearia para construcao
      */
-    GeradorClientes(Barbearia b) {
-        barbearia = b;
+    public GeradorClientes(Barbearia b) {
+        this(b, null);
     }
 
+    public GeradorClientes(Barbearia b, MainFrame frame){
+        barbearia = b;
+        logToStream = frame != null; /*PaneHandler hnd = new PaneHandler(new BufferedPaneOutputStream(console));
+        LOG.addHandler(hnd);
+        LOG.setUseParentHandlers(false);*/
+    }
+    
     @Override
     public void run() {
         for (int i = 0; i < barbearia.clientes; i++) {
             //int randomInt = 0; //Descomentar essa linha e comentar a abaixo se for pra fazer tudo correndo
-            int randomInt = (randomGenerator.nextInt(5)) + 1; //Tempo. Atualmente 1 a 6 segundos
+            int randomInt = (randomGenerator.nextInt(2)) + 0; //Tempo. Atualmente 0 a 2 segundos
             try { //Escolhe um tempo para a entrada entre um cliente e outro
                 TimeUnit.SECONDS.sleep(randomInt);
                 //TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos

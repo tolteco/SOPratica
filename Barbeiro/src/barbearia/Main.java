@@ -17,19 +17,19 @@ import java.util.logging.Logger;
 
 public class Main extends Thread {
 
-    static String namefile = "Relatorio(" + (new SimpleDateFormat("dd-MM-yyyy").format(new Date())) + ").txt" /**
+    public static String namefile = "Relatorio(" + (new SimpleDateFormat("dd-MM-yyyy").format(new Date())) + ").txt" /**
              * @param namefile Usado para criar arquivo com o nome do relatorio
              */
             ;
-    static File file /**
+    public static File file /**
              * @param file Ponteiro para o arquivo
              */
             ;
-    static PrintWriter writer /**
+    public static PrintWriter writer /**
              * @param writer Ponteiro para escritor java em arquivo
              */
             ;
-    static Random randomGenerator /**
+    public static Random randomGenerator /**
              * @param randomGenerator Gerador aleatorio usado nos tempos de
              * atendimento e entre criacao de clientes
              */

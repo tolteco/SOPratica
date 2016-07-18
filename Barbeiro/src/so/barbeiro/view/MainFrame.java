@@ -5,19 +5,91 @@
  */
 package so.barbeiro.view;
 
+import barbearia.Barbearia;
+import barbearia.Barbeiro;
+import barbearia.Cliente;
+import barbearia.GeradorClientes;
+import barbearia.Main;
+import static barbearia.Main.EscreveRelatorio;
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.function.Consumer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
+
 /**
  *
  * @author User
  */
 public class MainFrame extends javax.swing.JFrame {
-
+    public static final Logger LOG = Logger.getLogger(MainFrame.class.getName());
+    private static StyledDocument doc;
+    private final BufferedPaneOutputStream glOutStream;
+    
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
+        
+        doc = Console.getStyledDocument();
+        BufferedPaneOutputStream outStream = new BufferedPaneOutputStream(Console);
+        PaneHandler hndlr = new PaneHandler(outStream, new SOFormatter());
+        glOutStream = outStream;
+        LOG.addHandler(hndlr);
+        LOG.setUseParentHandlers(false);
     }
 
+    public JTextPane getConsole(){
+        return Console;
+    }
+    
+    private void runProblem(){
+        Barbearia barbearia = new Barbearia(this);
+        boolean H = EscreveRelatorio();
+        if (!H) {
+            JOptionPane.showMessageDialog(null, "Erro na criação do arquivo.", this.getTitle(), JOptionPane.ERROR_MESSAGE);
+        } else {
+            int[] ret = cadeirasClientes();
+            Main.randomGenerator = new Random();
+            barbearia.cadeiras = ret[0];
+            barbearia.clientes = ret[1];
+            
+            tablesInit(ret[0]);
+            
+            LOG.info("Barbearia aberta...");
+            
+            Main.writer.println("Abrindo Barbearia\n");
+            Main.writer.println("Cadeiras de espera: " + barbearia.cadeiras + "\n");
+            Main.writer.println("Clientes ate finalizacao: " + barbearia.clientes + "\n");
+            Main.writer.println("-----------------------------\n");
+            Thread b = new Thread(new Barbeiro(barbearia, this));
+            Thread g = new Thread(new GeradorClientes(barbearia, this));
+            b.start(); //Inicia Threads
+            g.start();
+        }
+    }
+    
+    private void tablesInit(int cadeiras){
+        DefaultTableModel model = (DefaultTableModel)CadeirasTable.getModel();
+        model.setRowCount(cadeiras);
+        
+        model = (DefaultTableModel)AtendidosTable.getModel();
+        model.setRowCount(0);
+        
+        model = (DefaultTableModel)ClientesNaoAtendidosTable.getModel();
+        model.setRowCount(0);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,6 +100,12 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         EstadoBarbeiroPanel = new javax.swing.JPanel();
+        CadeirasLabel = new javax.swing.JLabel();
+        CadeirasField = new javax.swing.JTextField();
+        MaxCliLabel = new javax.swing.JLabel();
+        MaxCLField = new javax.swing.JTextField();
+        BarbeiroPanel = new javax.swing.JPanel();
+        Barbeiro = new javax.swing.JToggleButton();
         CadeirasPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         CadeirasTable = new javax.swing.JTable();
@@ -41,40 +119,90 @@ public class MainFrame extends javax.swing.JFrame {
         Console = new javax.swing.JTextPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         EstadoBarbeiroPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Barbearia", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
+        CadeirasLabel.setText("Cadeiras");
+
+        CadeirasField.setText("9999");
+
+        MaxCliLabel.setText("Max. Clientes");
+
+        MaxCLField.setText("9999");
+
+        BarbeiroPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Barbeiro"));
+
+        Barbeiro.setText("Dormindo");
+
+        javax.swing.GroupLayout BarbeiroPanelLayout = new javax.swing.GroupLayout(BarbeiroPanel);
+        BarbeiroPanel.setLayout(BarbeiroPanelLayout);
+        BarbeiroPanelLayout.setHorizontalGroup(
+            BarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarbeiroPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Barbeiro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        BarbeiroPanelLayout.setVerticalGroup(
+            BarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Barbeiro, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout EstadoBarbeiroPanelLayout = new javax.swing.GroupLayout(EstadoBarbeiroPanel);
         EstadoBarbeiroPanel.setLayout(EstadoBarbeiroPanelLayout);
         EstadoBarbeiroPanelLayout.setHorizontalGroup(
             EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
+                        .addComponent(CadeirasLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CadeirasField))
+                    .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
+                        .addComponent(MaxCliLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(MaxCLField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(264, 264, 264)
+                .addComponent(BarbeiroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         EstadoBarbeiroPanelLayout.setVerticalGroup(
             EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
+                .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CadeirasLabel)
+                    .addComponent(CadeirasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MaxCliLabel)
+                    .addComponent(MaxCLField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EstadoBarbeiroPanelLayout.createSequentialGroup()
+                .addComponent(BarbeiroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         CadeirasPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Cadeiras da barbearia"));
 
         CadeirasTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Nome do Cliente"
+                "ID", "Nome do Cliente"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -98,19 +226,19 @@ public class MainFrame extends javax.swing.JFrame {
 
         AtendidosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome do Cliente", "Tempo de atendimento"
+                "ID", "Nome do Cliente", "Tempo de atendimento"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -134,19 +262,19 @@ public class MainFrame extends javax.swing.JFrame {
 
         ClientesNaoAtendidosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Nome do Cliente"
+                "ID", "Nome do Cliente"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -169,11 +297,17 @@ public class MainFrame extends javax.swing.JFrame {
         Console.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Console", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         jScrollPane3.setViewportView(Console);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenu1.setText("Run");
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenuItem1.setText("Run problem");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -215,6 +349,60 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        Console.setText("");
+        Console.setCaretPosition(0);
+        runProblem();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    /**
+     * Pergunta ao user o número de cadeiras e o número de clientes
+     * que aparecerão para cortar o cabelo.
+     * @return Array cuja primeira posição é o num. de cadeiras
+     *         e a segunda é o num. máx. de clientes.
+     */
+    private int[] cadeirasClientes (){
+        String ret = JOptionPane.showInputDialog("Quantas cadeiras existirão na barbearia?");
+        int cadeiras = Integer.parseInt(ret);
+        ret = JOptionPane.showInputDialog("Quantos clientes aparecerão para cortar o cabelo?");
+        int maxClientes = Integer.parseInt(ret);
+        int[] rs = {cadeiras,maxClientes};
+        return rs;
+    }
+    
+    public void fillFila(ArrayList<Cliente> cls){
+        DefaultTableModel model = (DefaultTableModel)CadeirasTable.getModel();
+        model.setRowCount(0);
+        cls.stream().forEach((cli) -> {
+            model.addRow(cli.getFila());
+        });
+    }
+    
+    public void fillNaoAtendidos(ArrayList<Cliente> cls){
+        DefaultTableModel model = (DefaultTableModel)ClientesNaoAtendidosTable.getModel();
+        model.setRowCount(0);
+        cls.stream().forEach((cli) -> {
+            model.addRow(cli.getNaoAtendido());
+        });
+    }
+    
+    public void fillAtendidos(ArrayList<Cliente> cls){
+        DefaultTableModel model = (DefaultTableModel)AtendidosTable.getModel();
+        model.setRowCount(0);
+        cls.stream().forEach((Cliente cli) -> {
+            model.addRow(cli.getAtendido());
+        });
+    }
+    
+    /**
+     * Troca a cor do estado do barbeiro.
+     * @param state 0 - Dormindo.
+     *              1 - Atendendo.
+     */
+    public void setBarberState(int state){
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -244,6 +432,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainFrame().setVisible(true);
             }
@@ -253,15 +442,21 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AtendidosPanel;
     private javax.swing.JTable AtendidosTable;
+    private javax.swing.JToggleButton Barbeiro;
+    private javax.swing.JPanel BarbeiroPanel;
+    private javax.swing.JTextField CadeirasField;
+    private javax.swing.JLabel CadeirasLabel;
     private javax.swing.JPanel CadeirasPanel;
     private javax.swing.JTable CadeirasTable;
     private javax.swing.JPanel ClientesNaoAtendidosPanel;
     private javax.swing.JTable ClientesNaoAtendidosTable;
     private javax.swing.JTextPane Console;
     private javax.swing.JPanel EstadoBarbeiroPanel;
+    private javax.swing.JTextField MaxCLField;
+    private javax.swing.JLabel MaxCliLabel;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

@@ -65,8 +65,9 @@ public class Barbearia {
      */
     public synchronized boolean mexefila(int k, int i) {
         sebd = false;
-        Cliente cliente = new Cliente(i);
+        Cliente cliente = null;
         if (k == 1) { //Gerador de clientes
+            cliente = new Cliente(i);
             if (fila == cadeiras) {
                 if (logToStream)
                     java.awt.EventQueue.invokeLater(() -> { LOG.severe("Fila cheia"); });
@@ -100,10 +101,12 @@ public class Barbearia {
                 else
                     System.out.println("Barbeiro atendendo");
                 Main.writer.println("Barbeiro em atendimento");
-                atendidos.add(cliente);
-                if (filaC.size() > 0)
-                        filaC.remove(0);
-                cliente.setTempoAtendimento(Barbeiro.atendimentoTime); //Add para o último cliente, o último tempo.
+                
+                if (filaC.size() > 0){
+                    cliente = filaC.remove(0);
+                    cliente.setTempoAtendimento(Barbeiro.atendimentoTime); //Add para o último cliente, o último tempo.
+                    atendidos.add(cliente);
+                }
             } else {
                 try {
                     Main.writer.println("Barbeiro dormindo");

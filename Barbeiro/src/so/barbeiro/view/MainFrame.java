@@ -12,6 +12,8 @@ import barbearia.GeradorClientes;
 import barbearia.Main;
 import static barbearia.Main.EscreveRelatorio;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.function.Consumer;
@@ -32,8 +34,11 @@ import javax.swing.text.StyledDocument;
  */
 public class MainFrame extends javax.swing.JFrame {
     public static final Logger LOG = Logger.getLogger(MainFrame.class.getName());
-    private static StyledDocument doc;
-    private final BufferedPaneOutputStream glOutStream;
+    
+    private int cadeiras;
+    private int maxClientes;
+    private int mode; //1, 2, 3
+    private boolean useMilis;
     
     /**
      * Creates new form MainFrame
@@ -41,10 +46,12 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
         
-        doc = Console.getStyledDocument();
+        //Seta janela para o meio da tela, independente da resolução.
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
+        
         BufferedPaneOutputStream outStream = new BufferedPaneOutputStream(Console);
         PaneHandler hndlr = new PaneHandler(outStream, new SOFormatter());
-        glOutStream = outStream;
         LOG.addHandler(hndlr);
         LOG.setUseParentHandlers(false);
     }
@@ -59,12 +66,13 @@ public class MainFrame extends javax.swing.JFrame {
         if (!H) {
             JOptionPane.showMessageDialog(null, "Erro na criação do arquivo.", this.getTitle(), JOptionPane.ERROR_MESSAGE);
         } else {
-            int[] ret = cadeirasClientes();
-            Main.randomGenerator = new Random();
-            barbearia.cadeiras = ret[0];
-            barbearia.clientes = ret[1];
+            if (!problemParams()) return;
             
-            tablesInit(ret[0]);
+            Main.randomGenerator = new Random();
+            barbearia.cadeiras = cadeiras;
+            barbearia.clientes = maxClientes;
+            
+            tablesInit(cadeiras);
             
             LOG.info("Barbearia aberta...");
             
@@ -72,8 +80,8 @@ public class MainFrame extends javax.swing.JFrame {
             Main.writer.println("Cadeiras de espera: " + barbearia.cadeiras + "\n");
             Main.writer.println("Clientes ate finalizacao: " + barbearia.clientes + "\n");
             Main.writer.println("-----------------------------\n");
-            Thread b = new Thread(new Barbeiro(barbearia, this));
-            Thread g = new Thread(new GeradorClientes(barbearia, this));
+            Thread b = new Thread(new Barbeiro(barbearia, this, mode, useMilis));
+            Thread g = new Thread(new GeradorClientes(barbearia, this, mode, useMilis));
             b.start(); //Inicia Threads
             g.start();
         }
@@ -104,8 +112,8 @@ public class MainFrame extends javax.swing.JFrame {
         CadeirasField = new javax.swing.JTextField();
         MaxCliLabel = new javax.swing.JLabel();
         MaxCLField = new javax.swing.JTextField();
-        BarbeiroPanel = new javax.swing.JPanel();
         Barbeiro = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
         CadeirasPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         CadeirasTable = new javax.swing.JTable();
@@ -133,23 +141,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         MaxCLField.setText("9999");
 
-        BarbeiroPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Barbeiro"));
-
         Barbeiro.setText("Dormindo");
 
-        javax.swing.GroupLayout BarbeiroPanelLayout = new javax.swing.GroupLayout(BarbeiroPanel);
-        BarbeiroPanel.setLayout(BarbeiroPanelLayout);
-        BarbeiroPanelLayout.setHorizontalGroup(
-            BarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarbeiroPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Barbeiro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        BarbeiroPanelLayout.setVerticalGroup(
-            BarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Barbeiro, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-        );
+        jLabel1.setText("Barbeiro:");
 
         javax.swing.GroupLayout EstadoBarbeiroPanelLayout = new javax.swing.GroupLayout(EstadoBarbeiroPanel);
         EstadoBarbeiroPanel.setLayout(EstadoBarbeiroPanelLayout);
@@ -157,33 +151,28 @@ public class MainFrame extends javax.swing.JFrame {
             EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
-                        .addComponent(CadeirasLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CadeirasField))
-                    .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
-                        .addComponent(MaxCliLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MaxCLField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(264, 264, 264)
-                .addComponent(BarbeiroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CadeirasLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CadeirasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(MaxCliLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MaxCLField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Barbeiro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         EstadoBarbeiroPanelLayout.setVerticalGroup(
             EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EstadoBarbeiroPanelLayout.createSequentialGroup()
-                .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CadeirasLabel)
-                    .addComponent(CadeirasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MaxCliLabel)
-                    .addComponent(MaxCLField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EstadoBarbeiroPanelLayout.createSequentialGroup()
-                .addComponent(BarbeiroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(EstadoBarbeiroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(CadeirasLabel)
+                .addComponent(CadeirasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MaxCliLabel)
+                .addComponent(MaxCLField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Barbeiro)
+                .addComponent(jLabel1))
         );
 
         CadeirasPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Cadeiras da barbearia"));
@@ -219,7 +208,9 @@ public class MainFrame extends javax.swing.JFrame {
         );
         CadeirasPanelLayout.setVerticalGroup(
             CadeirasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CadeirasPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         AtendidosPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Clientes atendidos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
@@ -255,7 +246,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         AtendidosPanelLayout.setVerticalGroup(
             AtendidosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
         );
 
         ClientesNaoAtendidosPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Clientes não atendidos"));
@@ -294,11 +285,13 @@ public class MainFrame extends javax.swing.JFrame {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
+        Console.setEditable(false);
         Console.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Console", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         jScrollPane3.setViewportView(Console);
 
         jMenu1.setText("Run");
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         jMenuItem1.setText("Run problem");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,18 +349,36 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
-     * Pergunta ao user o número de cadeiras e o número de clientes
-     * que aparecerão para cortar o cabelo.
-     * @return Array cuja primeira posição é o num. de cadeiras
-     *         e a segunda é o num. máx. de clientes.
+     * Inicia o dialog para obter os
+     * params. do problema.
+     * @return True se usuário quis executar.
+     *         False se usuário cancelou.
      */
-    private int[] cadeirasClientes (){
-        String ret = JOptionPane.showInputDialog("Quantas cadeiras existirão na barbearia?");
-        int cadeiras = Integer.parseInt(ret);
-        ret = JOptionPane.showInputDialog("Quantos clientes aparecerão para cortar o cabelo?");
-        int maxClientes = Integer.parseInt(ret);
-        int[] rs = {cadeiras,maxClientes};
-        return rs;
+    private boolean problemParams (){
+        this.setEnabled(false);
+        InitDialog diag = new InitDialog(this);//.setVisible(true);
+        diag.setVisible(true);
+        boolean validVars = diag.isValidVariables();
+        diag.dispose();
+        return validVars;
+    }
+
+    public void setCadeiras(int cadeiras) {
+        this.cadeiras = cadeiras;
+    }
+
+    public void setMaxClientes(int maxClientes) {
+        this.maxClientes = maxClientes;
+    }
+
+    public void setMode(int mode) {
+        if (mode<1 || mode>3) throw new IllegalArgumentException("Modo inválido!");
+        this.mode = mode;
+    }
+
+    
+    public void setUseMilis(boolean useMilis) {
+        this.useMilis = useMilis;
     }
     
     public void fillFila(ArrayList<Cliente> cls){
@@ -443,7 +454,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel AtendidosPanel;
     private javax.swing.JTable AtendidosTable;
     private javax.swing.JToggleButton Barbeiro;
-    private javax.swing.JPanel BarbeiroPanel;
     private javax.swing.JTextField CadeirasField;
     private javax.swing.JLabel CadeirasLabel;
     private javax.swing.JPanel CadeirasPanel;
@@ -454,6 +464,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel EstadoBarbeiroPanel;
     private javax.swing.JTextField MaxCLField;
     private javax.swing.JLabel MaxCliLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;

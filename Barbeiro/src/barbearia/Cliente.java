@@ -76,4 +76,9 @@ public class Cliente {
         Object[] ret = {id, nome, tempoAtendimento};
         return ret;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "nome=" + nome + ", id=" + id + ", tempoAtendimento=" + tempoAtendimento + '}';
+    }
 }

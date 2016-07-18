@@ -44,7 +44,7 @@ public class SOFormatter extends Formatter{
     @Override
     public String format(LogRecord record) {
         Date date=new Date(record.getMillis()); //HH para 0-23 hrs
-        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy", locale);
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss.SSS dd/MM/yyyy", locale); ///.SSS para milisegundos
         
         /*String ret = formatter.format(date) + " - " + record.getSourceClassName() +
                " " + record.getSourceMethodName() + 

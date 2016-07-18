@@ -11,8 +11,12 @@ import java.util.logging.Logger;
 import so.barbeiro.view.MainFrame;
 
 public class GeradorClientes extends Thread implements Runnable {
+    private static final int MAGICAL_TIME=2; //Tempo de espera
     private static final Logger LOG = MainFrame.LOG;
     private final boolean logToStream;
+    
+    private final int MAX_TIME;
+    private final boolean useMilis;
     
     Barbearia barbearia /**
              * @param barbearia E construido com a barbearia para que possa
@@ -25,24 +29,34 @@ public class GeradorClientes extends Thread implements Runnable {
      * @param b Barbearia para construcao
      */
     public GeradorClientes(Barbearia b) {
-        this(b, null);
+        this(b, null, 1, false);
     }
 
-    public GeradorClientes(Barbearia b, MainFrame frame){
+    public GeradorClientes(Barbearia b, MainFrame frame, int mode, boolean useMilis){
         barbearia = b;
-        logToStream = frame != null; /*PaneHandler hnd = new PaneHandler(new BufferedPaneOutputStream(console));
+        logToStream = frame != null; 
+        /*PaneHandler hnd = new PaneHandler(new BufferedPaneOutputStream(console));
         LOG.addHandler(hnd);
         LOG.setUseParentHandlers(false);*/
+        
+        if (mode == 2){                //Modo 2: Barbeiro rápido:
+            MAX_TIME = MAGICAL_TIME*3; //Ao invés do barbeiro ser mais rápido,
+        } else {                       //o gerador é mais lento.
+            MAX_TIME = MAGICAL_TIME;
+        }
+        this.useMilis = useMilis;
     }
     
     @Override
     public void run() {
         for (int i = 0; i < barbearia.clientes; i++) {
             //int randomInt = 0; //Descomentar essa linha e comentar a abaixo se for pra fazer tudo correndo
-            int randomInt = (randomGenerator.nextInt(2)) + 0; //Tempo. Atualmente 0 a 2 segundos
+            int randomInt = (randomGenerator.nextInt(MAX_TIME));
             try { //Escolhe um tempo para a entrada entre um cliente e outro
-                TimeUnit.SECONDS.sleep(randomInt);
-                //TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos
+                if (useMilis)
+                    TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos
+                else
+                    TimeUnit.SECONDS.sleep(randomInt);
             } catch (InterruptedException ex) {
                 Logger.getLogger(GeradorClientes.class.getName()).log(Level.SEVERE, null, ex);
             }

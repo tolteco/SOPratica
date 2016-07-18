@@ -11,9 +11,13 @@ import java.util.logging.Logger;
 import so.barbeiro.view.MainFrame;
 
 public class Barbeiro extends Thread implements Runnable {
+    private static final int MAGICAL_TIME=2; //Tempo de espera
     private static final Logger LOG = MainFrame.LOG;
     private final boolean logToStream;
     private final MainFrame MainF;
+    
+    private final int MAX_TIME;
+    private final boolean useMilis;
     
     public static double atendimentoTime;
     
@@ -32,10 +36,10 @@ public class Barbeiro extends Thread implements Runnable {
      * @param b Barbearia para construcao
      */
     public Barbeiro(Barbearia b) {
-        this(b, null);
+        this(b, null, 1, false);
     }
 
-    public Barbeiro(Barbearia b, MainFrame frame){
+    public Barbeiro(Barbearia b, MainFrame frame, int mode, boolean useMilis){
         barbearia = b;
         this.MainF = frame;
         if (frame != null){
@@ -46,6 +50,13 @@ public class Barbeiro extends Thread implements Runnable {
         } else {
             logToStream = false;
         }
+        
+        if (mode == 3){                //Modo 3: Gerador rápido:
+            MAX_TIME = MAGICAL_TIME*3; //Ao invés do gerador ser mais rápido,
+        } else {                       //o barbeiro é mais lento.
+            MAX_TIME = MAGICAL_TIME;
+        }
+        this.useMilis = useMilis;
     }
     
     @Override
@@ -73,12 +84,13 @@ public class Barbeiro extends Thread implements Runnable {
      * se estivesse atendendo)
      */
     public void atendimento() {
-        //int randomInt = 0; //Descomentar essa linha e comentar a abaixo se for pra fazer tudo correndo
-        int randomInt = (Main.randomGenerator.nextInt(5)) + 1; //Tempo. Atualmente 1 a 6 segundos
+        int randomInt = (Main.randomGenerator.nextInt(MAX_TIME));
         atendimentoTime = randomInt;
         try {
-            TimeUnit.SECONDS.sleep(randomInt);
-            //TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos
+            if (useMilis)
+                TimeUnit.MILLISECONDS.sleep(randomInt); //Para milisegundos
+            else
+                TimeUnit.SECONDS.sleep(randomInt);
         } catch (InterruptedException ex) {
             Logger.getLogger(Barbeiro.class.getName()).log(Level.SEVERE, null, ex);
         }

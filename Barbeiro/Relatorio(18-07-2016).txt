@@ -485,3 +485,37 @@ Barbeiro acordado
 Barbeiro em atendimento
 Fechando Barbearia
 
+Abrindo Barbearia
+
+Cadeiras de espera: 5
+
+Clientes ate finalizacao: 10
+
+-----------------------------
+
+Barbeiro dormindo
+Cliente criado[0]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro dormindo
+Cliente criado[1]
+Cliente criado[2]
+Cliente criado[3]
+Barbeiro acordado
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
+Cliente criado[4]
+Barbeiro em atendimento
+Cliente criado[5]
+Cliente criado[6]
+Cliente criado[7]
+Barbeiro em atendimento
+Cliente criado[8]
+Cliente criado[9]
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
+Barbeiro em atendimento
+Fechando Barbearia
+

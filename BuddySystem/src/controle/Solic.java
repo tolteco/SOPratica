@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Estrutura para solicitacoes de memoria
  */
 package controle;
 
@@ -14,6 +12,12 @@ public class Solic {
     int qtde; //Indica a quantidade de memoria solicitada
     int pid; //Indica processo pedindo memoria ou a liberacao
 
+    /**
+     * Construtor default de solicitacoes
+     * @param in : true se e solicitacao
+     * @param qtde : quantidade de memoria a ser alocada (deve ser multiplo de 4096)
+     * @param pid : pid do processo requisitante
+     */
     public Solic(boolean in, int qtde, int pid) {
         this.in = in;
         this.qtde = qtde;

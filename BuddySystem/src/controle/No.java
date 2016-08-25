@@ -12,6 +12,7 @@ public class No {
     public No pai, esquerda, direita;
     public boolean ocupado;
     public byte nivel;
+    private final int ROOT_SIZE = 8388608;
 
     /**
      * Para criar um novo no
@@ -29,6 +30,10 @@ public class No {
         }
     }
     
+    public int getSize(){
+        return (int)(ROOT_SIZE/(Math.pow(2, nivel)));
+    }
+    
     /**
      * Funcao de alocacao de memoria, recebe o no como referencia
      * @return true se alocou com sucesso a memoria
@@ -41,3 +46,8 @@ public class No {
         return true;
     }
 }
+
+/**
+ * Exemplo de codigo de no; disponivel em:
+ * https://github.com/utkarshsimha/buddy_system/blob/master/src/Node.java
+ */

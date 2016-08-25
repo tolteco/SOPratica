@@ -18,6 +18,7 @@ public class BuddySystem {
         ArrayList<Solic> S = new ArrayList<>();
         int Op;
         Scanner in = new Scanner(System.in);
+        System.err.println("Tamanho exigido maior que a memoria disponivel");
         
         System.out.println("Informe o metodo de solicitacoes (1 Teclado, 2 Arquivo)");
         Op = in.nextInt();
@@ -30,3 +31,9 @@ public class BuddySystem {
     }
 
 }
+
+/**
+ * RETIRAR QUANDO FOR ENTREGAR
+ * Projeto de arvore do buddy baseado em:
+ * https://github.com/utkarshsimha/buddy_system/tree/master/src
+ */

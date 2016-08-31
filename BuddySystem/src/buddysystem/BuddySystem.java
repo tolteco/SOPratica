@@ -93,7 +93,7 @@ public class BuddySystem {
             System.out.println("Iniciando requisicoes");
             long tI = System.currentTimeMillis();
             for (Solic s : S) {
-                System.out.println(s);
+                //System.out.println(s);
                 if (s.isIn()) { //Se e uma solicitacao
                     if (a.pedeMemoria(s))
                         reqat++;
@@ -102,8 +102,8 @@ public class BuddySystem {
                     a.liberaMemoria(s);
                     lib++;
                 }
-                System.out.println("Memoria Alocada = " + a.getOcupada());
-                a.imprimeMemoria(a.getRoot());
+                //System.out.println("Memoria Alocada = " + a.getOcupada());
+                //a.imprimeMemoria(a.getRoot());
                 //a.imprimeArvore(a.getRoot());
             }
             long tF = System.currentTimeMillis();
@@ -114,7 +114,7 @@ public class BuddySystem {
             System.out.println("Requisicoes Realizadas: " + req);
             System.out.println("Requisicoes Atendidas : " + reqat);
             System.out.println("Liberacoes            : " + lib);
-
+            System.out.println("Tempo de execucao     : " + (tF - tI));
         } else {
             System.out.println("Opcao Invalida");
         }

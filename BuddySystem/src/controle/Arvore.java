@@ -35,12 +35,12 @@ public class Arvore {
      */
     public boolean pedeMemoria(Solic s) {
         if (s.getQtde() > RootSize.ROOTSIZE) {
-            System.out.println("Tamanho exigido maior que a memoria disponivel");
+            //System.out.println("Tamanho exigido maior que a memoria disponivel");
             return false;
         }
         No n = achaLivre(root, s.getQtde());
         if (n == null) {
-            System.out.println("Tamanho exigido indisponivel");
+            //System.out.println("Tamanho exigido indisponivel");
             return false;
         } else {
             n.alocar(s.getPid());
@@ -57,13 +57,13 @@ public class Arvore {
      */
     public boolean liberaMemoria(Solic So) {
         if (So.getQtde() > RootSize.ROOTSIZE) {
-            System.out.println("Tamanho exigido maior que a memoria disponivel");
+            //System.out.println("Tamanho exigido maior que a memoria disponivel");
             return false;
         }
         No n = achaOcupado(root, So.getPid());
         System.out.println(n);
         if (n == null) {
-            System.out.println("PID informado nao encontrado na arvore");
+            //System.out.println("PID informado nao encontrado na arvore");
             return false;
         } else {
             n.desalocar(); //Desaloca o no
@@ -125,7 +125,7 @@ public class Arvore {
             }
         } else if (tam <= n.getSize() / 2) { //Se ele tem que ser quebrado
             if ((n.nivel + 1) == RootSize.MAXLEVELS) {
-                System.out.println("Erro. Tentativa de quebra de memoria em excesso, retornando bloco de nivel maximo");
+                //System.out.println("Erro. Tentativa de quebra de memoria em excesso, retornando bloco de nivel maximo");
                 return n;
             }
             if (!n.isSplit()) {

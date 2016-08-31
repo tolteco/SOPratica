@@ -33,6 +33,7 @@ public class Leitor {
         }
         Solic S = new Solic(in, qtde, pid);
         H.add(S);
+        in = false;
         while (rfile.hasNextInt()) {
             s = rfile.nextInt();
             pid = rfile.nextInt();
@@ -43,6 +44,7 @@ public class Leitor {
             S = new Solic(in, qtde, pid);
             H.add(S);
             System.out.println("In: " + s + " " + pid + " " + qtde);
+            in = false;
         }
         return H;
     }

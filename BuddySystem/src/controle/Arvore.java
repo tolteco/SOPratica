@@ -1,72 +1,141 @@
-/*
+/**
  * Guarda arvore de nos para estrutura
  */
 package controle;
 
-import java.util.ArrayList;
+import entradasaida.RootSize;
 
 public class Arvore {
 
     private No root;
-    private int index = 0;
-    public ArrayList<No> list = new ArrayList<>();
-    private final int MAX_LEVELS = 12;
-    private final int ROOT_SIZE = 8388608; //4096 * 2048
+    private int ocupada = 0;
+
+    public No getRoot() {
+        return root;
+    }
+
+    public int getOcupada() {
+        return ocupada;
+    }
 
     public Arvore() {
-        root = null;
+        root = createNo(null);
     }
 
     private No createNo(No pai) {
         No n = new No(pai);
-        list.add(index, n);
-        index++;
         return n;
     }
 
-    public boolean requestMem(int tam) {
-        if (tam > ROOT_SIZE) {
-            System.err.println("Tamanho exigido maior que a memoria disponivel");
+    /**
+     * Funcao para solicitacao de memoria
+     *
+     * @param s : Estrutura da solicitacao a ser alocada
+     * @return : true se foi possivel alocar o no
+     */
+    public boolean pedeMemoria(Solic s) {
+        if (s.getQtde() > RootSize.ROOTSIZE) {
+            System.out.println("Tamanho exigido maior que a memoria disponivel");
             return false;
         }
-        No n = findNo(root, tam);
+        No n = achaLivre(root, s.getQtde());
         if (n == null) {
-            System.err.println("Tamanho exigido indisponivel");
+            System.out.println("Tamanho exigido indisponivel");
             return false;
         } else {
-            n.alocar();
+            n.alocar(s.getPid());
+            ocupada = ocupada + n.getSize();
+            return true;
         }
-        return true;
+    }
+
+    /**
+     * Libera a memoria do pid inserido na solicitacao
+     *
+     * @param So : Solicitacao de liberacao de memoria
+     * @return : true se o no foi desalocado
+     */
+    public boolean liberaMemoria(Solic So) {
+        if (So.getQtde() > RootSize.ROOTSIZE) {
+            System.out.println("Tamanho exigido maior que a memoria disponivel");
+            return false;
+        }
+        No n = achaOcupado(root, So.getPid());
+        System.out.println(n);
+        if (n == null) {
+            System.out.println("PID informado nao encontrado na arvore");
+            return false;
+        } else {
+            n.desalocar(); //Desaloca o no
+            ocupada = ocupada - n.getSize();
+            procuraVazios(root); //Procura ramos da arvore que nao estejam alocados para reduzi-los a um no menor
+            return true;
+        }
+    }
+
+    /**
+     * Procura o no que o processo esta alocando
+     *
+     * @param n : No base para consulta
+     * @param pid : pid do processo
+     * @param ni : nivel da memoria a ser desalocada
+     * @return : No encontrado que deve ser desalocado, retorna null se nao for
+     * encontrado
+     */
+    private No achaOcupado(No n, int pid) {
+        No temp = null;
+        if (n.ocupado == true || n.isSplit()) {
+            if (pid == n.pid && n.ocupado == true) {
+                return n;
+            } else if (n.isSplit()) {
+                temp = achaOcupado(n.esquerda, pid);
+                if (temp != null) {
+                    return temp;
+                }
+                temp = achaOcupado(n.direita, pid);
+                if (temp != null) {
+                    return temp;
+                }
+            } else {
+                return null;
+            }
+        }
+        return temp;
     }
 
     /**
      * Procura um no com espaco suficiente a partir do no entregue
+     *
      * @param n : no a ser usado como base (geralmente usado root)
      * @param tam : tamanho solicitado
-     * @return : no que deve ser alocado (ja divide e tudo)
+     * @return : no que deve ser alocado (ja dividido e tudo)
      */
-    private No findNo(No n, int tam) {
+    private No achaLivre(No n, int tam) {
         if (n.ocupado == true) {
             return null;
         }
         No temp = null;
         //Se o no nao esta quebrado, se o tamanho solicitado e pelo o menos o que o 
         //no tem e se o tamanho e maior que a metade desse no (nao divide, tem que alocar ele)
-        if (!isSplit(n) && tam <= n.getSize() && tam > n.getSize() / 2) {
+        if (!n.isSplit() && tam <= n.getSize() && tam > n.getSize() / 2) {
             if (n.ocupado == false) {
                 return n;
             } else {
                 return null;
             }
         } else if (tam <= n.getSize() / 2) { //Se ele tem que ser quebrado
-            if (!isSplit(n)) {
+            if ((n.nivel + 1) == RootSize.MAXLEVELS) {
+                System.out.println("Erro. Tentativa de quebra de memoria em excesso, retornando bloco de nivel maximo");
+                return n;
+            }
+            if (!n.isSplit()) {
                 splitNo(n);
             }
-            temp = findNo(n.esquerda, tam);
+            temp = achaLivre(n.esquerda, tam);
             if (temp != null) {
                 return temp;
             }
-            temp = findNo(n.direita, tam);
+            temp = achaLivre(n.direita, tam);
             if (temp != null) {
                 return temp;
             } else {
@@ -88,13 +157,67 @@ public class Arvore {
     }
 
     /**
-     * Retorna se o no esta dividido em subniveis ou nao
+     * TENTA imprimir a arvore como esta; comeca pelo raiz, entao percorre a
+     * subarvore esquerda para cada no e depois direita
      *
-     * @param n : No a ser verificado
-     * @return : true se o no esta dividido em outros nos
+     * @param n : No (recebe inicialmente root)
      */
-    private boolean isSplit(No n) {
-        return !(n.esquerda == null || n.direita == null);
+    public void imprimeArvore(No n) {
+        System.out.println("No:");
+        if (n.ocupado) {
+            System.out.println("Alocado");
+            System.out.println("PID: " + n.pid);
+        } else {
+            System.out.println("Nao alocado");
+        }
+        System.out.println("Nivel: " + n.nivel);
+        if (n.esquerda != null) {
+            System.out.println("=====Nos a esquerda=====");
+            imprimeArvore(n.esquerda);
+        }
+        if (n.direita != null) {
+            System.out.println("=====Nos a direita=====");
+            imprimeArvore(n.direita);
+        }
+    }
+
+    /**
+     * Procura nos vazios para junta-los (Eita funcao chata de programar)
+     *
+     * @param n : No para buscar (comeca com root)
+     */
+    private void procuraVazios(No n) {
+        if (n.isSplit()) { //Se o no esta dividido
+            if (!(n.direita.ocupado) && !(n.esquerda.ocupado)) { //Se nem o no da direita nem o da esquerda estao ocupados
+                if (n.direita.isSplit() || n.esquerda.isSplit()) { //Se pelo o menos um deles estiver dividido
+                    if (n.esquerda.isSplit()) { //Logo, aqui o no da esquerda nao esta ocupado e esta dividido
+                        procuraVazios(n.esquerda);
+                    }
+                    if (n.direita.isSplit()) { //Logo, aqui o no da direita nao esta ocupado e esta dividido
+                        procuraVazios(n.direita);
+                    }
+                }
+                if (!n.direita.isSplit() && !n.esquerda.isSplit()) { //Se nenhum deles estiver dividido
+                    n.esquerda = null;
+                    n.direita = null;
+                }
+            }
+        }
+
+    }
+
+    /**
+     * Imprime estado da memoria
+     *
+     * @param n : No para funcao (comeca com root)
+     */
+    public void imprimeMemoria(No n) {
+        if (n.isSplit()) {
+            imprimeMemoria(n.esquerda);
+            imprimeMemoria(n.direita);
+        } else if (n.ocupado) {
+            System.out.println("PID = " + n.pid + "; Memoria alocada = " + n.getSize());
+        }
     }
 }
 

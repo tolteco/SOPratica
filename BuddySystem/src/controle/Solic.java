@@ -3,19 +3,19 @@
  */
 package controle;
 
-/**
- *
- * @author Maycon
- */
+
 public class Solic {
-    boolean in; //Indica se e solicitacao de memoria
-    int qtde; //Indica a quantidade de memoria solicitada
-    int pid; //Indica processo pedindo memoria ou a liberacao
+
+    private boolean in; //Indica se e solicitacao de memoria
+    private int qtde; //Indica a quantidade de memoria solicitada
+    private int pid; //Indica processo pedindo memoria ou a liberacao
 
     /**
      * Construtor default de solicitacoes
+     *
      * @param in : true se e solicitacao
-     * @param qtde : quantidade de memoria a ser alocada (deve ser multiplo de 4096)
+     * @param qtde : quantidade de memoria a ser alocada (deve ser multiplo de
+     * 4096)
      * @param pid : pid do processo requisitante
      */
     public Solic(boolean in, int qtde, int pid) {
@@ -47,5 +47,9 @@ public class Solic {
     public void setPid(int pid) {
         this.pid = pid;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Solicitacao: \n" + "Requisicao de memoria: " + in + "\nQuantidade Solicitada: " + qtde + "\nPID: " + pid;
+    }
 }

@@ -12,10 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Maycon
- */
 public class Leitor {
 
     public int qtde;
@@ -31,6 +27,7 @@ public class Leitor {
         int s = rfile.nextInt();
         int pid = rfile.nextInt();
         int qtde = rfile.nextInt();
+        System.out.println("In: " + s + " " + pid + " " + qtde);
         if (s == 1) {
             in = true;
         }
@@ -45,6 +42,7 @@ public class Leitor {
             }
             S = new Solic(in, qtde, pid);
             H.add(S);
+            System.out.println("In: " + s + " " + pid + " " + qtde);
         }
         return H;
     }

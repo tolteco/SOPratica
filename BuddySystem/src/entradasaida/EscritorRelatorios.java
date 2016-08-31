@@ -13,10 +13,6 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Maycon
- */
 public class EscritorRelatorios {
 
     private final StringBuilder QUERY = new StringBuilder();

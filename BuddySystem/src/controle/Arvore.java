@@ -68,7 +68,7 @@ public class Arvore {
         } else {
             n.desalocar(); //Desaloca o no
             ocupada = ocupada - n.getSize();
-            procuraVazios(root); //Procura ramos da arvore que nao estejam alocados para reduzi-los a um no menor
+            procuraVazios(n); //Procura ramos da arvore que nao estejam alocados para reduzi-los a um no menor
             return true;
         }
     }
@@ -187,23 +187,13 @@ public class Arvore {
      * @param n : No para buscar (comeca com root)
      */
     private void procuraVazios(No n) {
-        if (n.isSplit()) { //Se o no esta dividido
-            if (!(n.direita.ocupado) && !(n.esquerda.ocupado)) { //Se nem o no da direita nem o da esquerda estao ocupados
-                if (n.direita.isSplit() || n.esquerda.isSplit()) { //Se pelo o menos um deles estiver dividido
-                    if (n.esquerda.isSplit()) { //Logo, aqui o no da esquerda nao esta ocupado e esta dividido
-                        procuraVazios(n.esquerda);
-                    }
-                    if (n.direita.isSplit()) { //Logo, aqui o no da direita nao esta ocupado e esta dividido
-                        procuraVazios(n.direita);
-                    }
-                }
-                if (!n.direita.isSplit() && !n.esquerda.isSplit()) { //Se nenhum deles estiver dividido
-                    n.esquerda = null;
-                    n.direita = null;
-                }
+        if (n.pai != null) {
+            if ((!(n.pai.direita.ocupado) && !(n.pai.esquerda.ocupado)) && (!n.pai.direita.isSplit() && !n.pai.esquerda.isSplit())) { //Se nem o no da direita nem o da esquerda estao ocupados
+                n = n.pai;
+                mataFilhos(n);
+                procuraVazios(n);
             }
         }
-
     }
 
     /**
@@ -218,6 +208,15 @@ public class Arvore {
         } else if (n.ocupado) {
             System.out.println("PID = " + n.pid + "; Memoria alocada = " + n.getSize());
         }
+    }
+
+    /**
+     * Mata os filhos de um no
+     * @param n : no pai
+     */
+    private void mataFilhos(No n) {
+        n.esquerda = null;
+        n.direita = null;
     }
 }
 

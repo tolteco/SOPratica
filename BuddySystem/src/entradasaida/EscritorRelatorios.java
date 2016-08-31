@@ -18,10 +18,9 @@ public class EscritorRelatorios {
     private final StringBuilder QUERY = new StringBuilder();
 
     private String namefile = "Relatorio(";
-    private String A = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
     private String B = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
 
-    private boolean escreveRelatorio() {
+    public boolean escreveRelatorio(long tempo, int requisicoes, int liberacoes, int req, int reqat, int lib) {
 
         namefile = namefile + B;
         namefile = namefile + ").txt";
@@ -41,12 +40,10 @@ public class EscritorRelatorios {
             return false;
         }//Finalização de inicialização de escritor
 
-        QUERY.append("===============================================\n")
-                .append("    SIMULADOR DE ALOCACAO DE SISTEMA BUDDY\n")
-                .append("===============================================\n")
-                .append("Tempo de execucao (segundos): %i\n")
-                .append("Tempo de execucao (segundos): %i\n")
-                .append("===============================================\n");
+        QUERY.append(tempo)
+                .append(req)
+                .append(reqat)
+                .append(lib);
 
         writer.println(QUERY.toString());
         writer.close();

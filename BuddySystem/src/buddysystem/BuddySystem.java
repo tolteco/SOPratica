@@ -5,6 +5,7 @@ package buddysystem;
 
 import controle.Arvore;
 import controle.Solic;
+import entradasaida.EscritorRelatorios;
 import entradasaida.Leitor;
 import entradasaida.RootSize;
 import java.io.IOException;
@@ -12,8 +13,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BuddySystem {
-
-    private static final int ROOT_SIZE = 8388608;
 
     /**
      * @param args the command line arguments
@@ -27,7 +26,9 @@ public class BuddySystem {
         int b = 1; //Controlador de if de leitura do teclado
         boolean i = false; //boolean para ver se e requisicao ou liberacao de memoria
         int qtde = 0, pid = 0; //Porque tem que ser declarado E inicializado aqui!
+        int req = 0, lib = 0, reqat = 0;
         Scanner in = new Scanner(System.in); //Inicializacao de leitor do teclado
+        EscritorRelatorios ER = new EscritorRelatorios();
         System.out.println("SIMULADOR DE SISTEMA BUDDY");
         System.out.println("Memoria maxima: " + RootSize.ROOTSIZE);
         System.out.println("Quantidade maxima de niveis: " + RootSize.MAXLEVELS);
@@ -57,16 +58,19 @@ public class BuddySystem {
                 if (s == 1 || s == 0) {
                     So = new Solic(i, qtde, pid);
                     if (So.isIn()) { //Se e uma solicitacao
+                        req++;
                         if (a.pedeMemoria(So)) {
                             System.out.println("Memoria alocada");
+                            reqat++;
                         } else {
                             System.out.println("Erro ao alocar memoria");
                         }
                     } else { //Se e uma liberacao de memoria
+                        lib++;
                         if (a.liberaMemoria(So)) {
-                            System.out.println("Memoria alocada");
+                            System.out.println("Memoria liberada");
                         } else {
-                            System.out.println("Erro ao alocar memoria");
+                            System.out.println("Erro ao liberar memoria");
                         }
                     }
                     a.imprimeArvore(a.getRoot());
@@ -74,6 +78,9 @@ public class BuddySystem {
                 if (s == 2) {
                     System.out.println("Memoria Alocada = " + a.getOcupada());
                     a.imprimeMemoria(a.getRoot());
+                    System.out.println("Requisicoes ate o momento: " + req);
+                    System.out.println("Requisicoes atendidas ate o momento: " + reqat);
+                    System.out.println("Liberacoes ate o momento: " + lib);
                 }
                 System.out.println("Deseja fazer outra solicitacao? 0 Nao ou 1 Sim");
                 b = in.nextInt();
@@ -84,16 +91,30 @@ public class BuddySystem {
             Leitor L = new Leitor();
             S = L.Solicitacoes(); //Primeiro le tudo
             System.out.println("Iniciando requisicoes");
+            long tI = System.currentTimeMillis();
             for (Solic s : S) {
                 System.out.println(s);
                 if (s.isIn()) { //Se e uma solicitacao
-                    a.pedeMemoria(s);
+                    if (a.pedeMemoria(s))
+                        reqat++;
+                    req++;
                 } else { //Se e uma liberacao de memoria
                     a.liberaMemoria(s);
+                    lib++;
                 }
+                System.out.println("Memoria Alocada = " + a.getOcupada());
+                a.imprimeMemoria(a.getRoot());
                 //a.imprimeArvore(a.getRoot());
             }
-            a.imprimeArvore(a.getRoot());
+            long tF = System.currentTimeMillis();
+            ER.escreveRelatorio(tF - tI, req, lib, req, reqat, lib);
+            System.out.println("------------Situacao final------------");
+            System.out.println("Memoria Alocada = " + a.getOcupada());
+            a.imprimeMemoria(a.getRoot());
+            System.out.println("Requisicoes Realizadas: " + req);
+            System.out.println("Requisicoes Atendidas : " + reqat);
+            System.out.println("Liberacoes            : " + lib);
+
         } else {
             System.out.println("Opcao Invalida");
         }

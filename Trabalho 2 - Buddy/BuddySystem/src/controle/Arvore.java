@@ -219,8 +219,3 @@ public class Arvore {
         n.direita = null;
     }
 }
-
-/**
- * Exemplo de codigo de arvore; disponivel em:
- * https://github.com/utkarshsimha/buddy_system/blob/master/src/Tree.java
- */

@@ -121,8 +121,3 @@ public class BuddySystem {
     }
 
 }
-
-/**
- * RETIRAR QUANDO FOR ENTREGAR Projeto de arvore do buddy baseado em:
- * https://github.com/utkarshsimha/buddy_system/tree/master/src
- */

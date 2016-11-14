@@ -73,8 +73,3 @@ public class No {
     }
 
 }
-
-/**
- * Exemplo de codigo de no; disponivel em:
- * https://github.com/utkarshsimha/buddy_system/blob/master/src/Node.java
- */

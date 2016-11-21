@@ -64,8 +64,36 @@ int CalculaTamanho(){
 	return 0;
 }
 
+int SugereTamanho(){
+    int aux, tamsolicDw, tamsolicUp, D;
+
+    aux = tamsolic%512;
+    tamsolicDw = tamsolic-aux;
+    tamsolicUp = tamsolic+(512-aux);
+
+    printf("Escolha um tamanho permitido sugerido. Os tamanhos sao: %d e %d.\n", tamsolicDw, tamsolicUp);
+    printf("Escolha a opcao 0 para retornar ao menu, opcao 1 para %d ou 2 para %d.", tamsolicDw, tamsolicUp);
+    scanf("%d",&D);
+
+    if(D == 0){
+        return -1;
+    }else if(D == 1){
+        tamsolic=tamsolicDw;
+        return 0;
+
+    }else if(D == 2){
+        tamsolic = tamsolicUp;
+        return 0;
+    }else{
+        return -1;
+    }
+
+    return 0;
+}
+
 int main (int argc, char *op[]){
-	int A; //Variavel usada para verificacao de ero de funcoes
+	int A; //Variavel usada para verificacao de erro de funcoes
+	int B; //Variavel usada para receber a maior e a menor sugestao de tamanho em caso de erro
 	if (argc == 5){ //Verifica se a quantidade de argumentos e valida
 		strcpy(dir, "/dev/");
 		strcat(dir, op[1]); //recebe o parametro e adiciona ao fim da string, que ficara como "/dev/???*"
@@ -85,9 +113,18 @@ int main (int argc, char *op[]){
 				return -1;
 			}
 			A = CalculaTamanho();
-			if (A != 0){ //Problema do Bottega
+			if (A != 0){
 				printf("Erro, tamanho invalido.");
-				return -1;
+				B = SugereTamanho();
+				if (B == -1){
+                    return -1;
+				}else{
+                    A = CalculaTamanho();
+                    if(A != 0){
+                        printf("Erro.");
+                        return -1;
+                    }
+				}
 			}
 
 			//Inicio da formatacao, trecho onde efetivamente se escrevem dados na unidade a ser formatada

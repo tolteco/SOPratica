@@ -17,5 +17,13 @@ BitMap* newBitMap(void){
     return bitMap;
 }
 
+/**
+* Retorna o "ponteiro" para o
+* proximo bloco livre
+*/
+unsigned short findEmptyCluster(BitMap* bitMap){
+
+}
+
 #endif
 

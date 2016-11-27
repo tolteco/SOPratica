@@ -16,9 +16,10 @@ int main(int argc, char *op[]){
       printf("  [unidade]    Unidade separada para a unidade (sda, sdb1, ...)\n");
       return 0;
     }
-    strcpy(dir, "/dev/");
+    /*strcpy(dir, "/dev/");
 		strcat(dir, op[1]); //recebe o parametro e adiciona ao fim da string, que ficara como "/dev/???*"
-		d = fopen(dir, "w"); //Abre o diretorio para escrita
+		d = fopen(dir, "w"); //Abre o diretorio para escrita*/ //Isolado para testes com arquivos de imagem
+		d = fopen(op[1], "w");
     while (exit == 0){ //Ate que o comando de saida seja dado
       printf("%s : ", dir);
       fgets (comando, 98, stdin);

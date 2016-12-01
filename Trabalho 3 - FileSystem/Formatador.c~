@@ -232,7 +232,7 @@ int main (int argc, char *op[]){
 			size_t wb = fwrite(&root, sizeof(Centry_t), 1, d);
 			fwrite(&root2, sizeof(Centry_t), 1, d);
 
-			printf("%lu\n", wb & 1);
+			printf("%d\n", wb & 1);
 			/*fwrite(&root.nome, 1, 13, d);
 			fwrite(&root.extensao, 1, 4, d);
 			fwrite(&root.tipo, 1, 1, d);

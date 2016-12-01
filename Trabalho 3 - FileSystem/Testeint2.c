@@ -18,6 +18,35 @@ Centry_t root;
 Centry_t root2;
 Centry_t root3;
 
+char comando[100], dir[513], data1[21], temp[5], cc[102];
+
+void IntpData(unsigned int A){
+	int i;
+	sprintf(temp, "%d", (A & 31)); //Horas
+	strcpy(data1, temp);
+	strcat(data1, ":");
+	A = A >> 5;
+	sprintf(temp, "%d", (A & 63)); //Minutos
+	strcat(data1, temp);
+	strcat(data1, ":");
+	A = A >> 6;
+	sprintf(temp, "%d", ((A & 31)*2)); //Segundos
+	strcat(data1, temp);
+	strcat(data1, " ");
+	A = A >> 5;
+	sprintf(temp, "%d", (A & 31)); //Dias
+	strcat(data1, temp);
+	strcat(data1, "/");
+	A = A >> 5;
+	sprintf(temp, "%d", (A & 15)); //Meses
+	strcat(data1, temp);
+	strcat(data1, "/");
+	A = A >> 4;
+	sprintf(temp, "%d", ((A & 127) + 2000)); //Anos
+	strcat(data1, temp);
+	A = A >> 7;
+}
+
 int main (){
 	char *G;
 	char H[50] = "Primeiro segundo terceiro quarto quinto";
@@ -60,10 +89,13 @@ int main (){
 	criacao = (timeinfo->tm_year - 100) << 4;
 	criacao = (criacao + (timeinfo->tm_mon + 1)) << 5;
 	criacao = (criacao + (timeinfo->tm_mday)) << 5;
-	criacao = (criacao + (timeinfo->tm_hour)) << 6;
+	criacao = (criacao + (timeinfo->tm_sec / 2)) << 6;
 	criacao = (criacao + (timeinfo->tm_min)) << 5;
-	criacao = criacao + (timeinfo->tm_sec / 2);
-	printf ( "Shift = %u", criacao);
+	criacao = criacao + timeinfo->tm_hour;
+	printf ( "Shift = %u\n", criacao);
+
+	IntpData(criacao);
+	printf("Data e hora retornados : %s", data1);
 
 	/*time_t now = time(0); //Hora do sistema
 

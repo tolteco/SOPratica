@@ -20,11 +20,11 @@
 */
 #define STD_SECTORS_PER_BLK   0x1 ///1 - Dec
 
-typedef struct InitBlock {
+typedef struct InitBlocks {
     unsigned char  nome_unidade[13];
     unsigned short qtde_blocos;
     unsigned char  setores_por_bloco;
-}__attribute__((packed));
+}__attribute__((packed)) InitBlock;
 
 /**
 * Cria um bloco inicial padrao.

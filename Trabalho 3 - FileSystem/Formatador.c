@@ -24,7 +24,7 @@ Centry_t root;
 Centry_t root2;
 Centry_t root3;
 FILE *d;
-char dir[11], buffer[512], r1[34], r2[34], r[65], buffer2[480], label[12];
+char dir[11], buffer[512], r1[34], r2[34], r[65], buffer2[480], label[12], buffer81[511], b;
 int tipo = 0, setpblc = 0, totblc = 0;
 long long int tamsolic;
 unsigned short int blocostotal;
@@ -160,16 +160,15 @@ int main (int argc, char *op[]){
 			//Inicio da formatacao, trecho onde efetivamente se escrevem dados na unidade a ser formatada
 			//Dados iniciais
 			strcpy(label, op[2]);
-			fwrite(label, 1, 12, d);
+			fwrite(label, 1, 13, d);
 			fwrite(&blocostotal, 1, 2, d);
 			fwrite(&setorespbloco, 1, 1, d);
-			memset(&setorespbloco, 0, 1);
-			fwrite(&setorespbloco, 1, 1, d);
-
 			//bitmap
 			memset(buffer, 0, strlen(buffer));
+			buffer[0] = 128;
 			//fwrite(buffer, sizeof(char), 8192, d); //Se esse nao imprimir 16 vezes testar com os comentados ai embaixo
 			fwrite(buffer, 1, sizeof(buffer), d);
+			memset(buffer, 0, strlen(buffer));
 			fwrite(buffer, 1, sizeof(buffer), d);
 			fwrite(buffer, 1, sizeof(buffer), d);
 			fwrite(buffer, 1, sizeof(buffer), d);

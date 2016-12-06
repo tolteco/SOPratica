@@ -9,10 +9,9 @@
 //Informacoes iniciais iniciais
 typedef struct IICumulo
 {
-  unsigned char nome_unidade[12];
+  unsigned char nome_unidade[13];
   unsigned short qtde_blocos;
   unsigned char setores_por_bloco;
-  unsigned char sem_importancia;
 }__attribute__((packed)) IICumulo_t;
 
 //Estrutura de entradas de metadados
@@ -36,6 +35,7 @@ typedef struct BCumulo
 //Variaveis globais
 char comando[100], dir[513], data1[21], temp[5], cc[102], buffer54[510], nome[13], ext[4];
 char *com, *com2, *com3;
+char buffer5;
 unsigned short pont, l_p[65536];
 unsigned char AA;
 unsigned int BB;
@@ -106,56 +106,58 @@ void escreveID(){
   else {
     printf("%s ", data1);
     printTamanho();
-    printf(" %s", ID.nome);
+    printf(" %s\n", ID.nome);
   }
 }
 
 int copiario(){ //Copiar de dentro pra fora
-	strcpy(cc, com3);
-	strcat(cc, com2);
+  strcpy(cc, com3);
+  strcat(cc, com2);
   printf("cc = .%s.\n", cc);
-	f = fopen(com3, "w");
-	if (f == NULL){
+  f = fopen(com3, "w");
+  if (f == NULL){
     printf("Erro, Arquivo invalido");
     return -1;
   }
-	fread(&ID, 1, sizeof(ID), d);
-	while (ID.nome[0] != 0){
-		fread(&ID, 1, sizeof(ID), d);
+  fread(&ID, 1, sizeof(ID), d);
+  while (ID.nome[0] != 0){
+    fread(&ID, 1, sizeof(ID), d);
     printf("Lida entrada: %s - %u\n", ID.nome, ID.criacao);
-		if (strcmp(ID.nome, com2) == 0){
-			break;
-		}
-	}
-	J = 8208 + (ID.primeiro_setor * II.setores_por_bloco * 512);
-	if (strcmp(ID.nome, com2) == 0){
-		fseek(d, J, SEEK_SET);
-		fread(&buffer54, 1, sizeof(buffer54), d);
-		fread(&pont, 1, sizeof(pont), d);
-		fwrite(buffer54, 1, sizeof(buffer54), d);
-		while(pont != 0){
-			J = 8208 + (pont * II.setores_por_bloco * 512);
-			fseek(d, J, SEEK_SET);
-			fread(&buffer54, 1, sizeof(buffer54), d);
-			fread(&pont, 1, sizeof(pont), d);
-			fwrite(buffer54, 1, sizeof(buffer54), d);
-		}
-	}	else {
-		printf("Erro\n");
+    if (strcmp(ID.nome, com2) == 0){
+      break;
+    }
+  }
+  J = 8208 + (ID.primeiro_setor * II.setores_por_bloco * 512);
+  if (strcmp(ID.nome, com2) == 0){
+    fseek(d, J, SEEK_SET);
+    fread(&buffer54, 1, sizeof(buffer54), d);
+    fread(&pont, 1, sizeof(pont), d);
+    fwrite(buffer54, 1, sizeof(buffer54), d);
+    while(pont != 0){
+      J = 8208 + (pont * II.setores_por_bloco * 512);
+      fseek(d, J, SEEK_SET);
+      fread(&buffer54, 1, sizeof(buffer54), d);
+      fread(&pont, 1, sizeof(pont), d);
+      fwrite(buffer54, 1, sizeof(buffer54), d);
+    }
+  }	else {
+    printf("Erro\n");
   }
   return 0;
 }
 
 int buscaponteiro(long long A){
-	unsigned char C;
-	int i = 0, j = 0, k = 1;
-	while(A > 0){ //Enquanto o valor solicitado for maior que 0
-		C = Bitmap.bit[i] & (256 >> k);
-		if (C == 0){
-			A = A - Us;
-			l_p[j] = k * i;
+  unsigned char C;
+  int i = 0, j = 0, k = 1;
+  while(A > 0){ //Enquanto o valor solicitado for maior que 0
+    C = Bitmap.bit[i] & (256 >> k);
+    //printf("Cbp = %u", C);
+    if (C == 0){
+      A = A - Us;
+      l_p[j] = (i+1) * (k-1);
       j++;
-		}
+      Bitmap.bit[i] = Bitmap.bit[i] | (256 >> k);
+    }
     if (k == 8){
       k = 0;
       i++;
@@ -164,91 +166,100 @@ int buscaponteiro(long long A){
       return 1;
     }
     k++;
-	}
+  }
+  fseek(f, 0, SEEK_SET);
+  fwrite(&II, 1, sizeof(IICumulo_t), d);
+  fwrite(&Bitmap, 1, sizeof(char), d);
   return 0;
 }
 
 int copiaroi(){ //Copiar de fora pra dentro
-	int i , j, k, l, m, C;
-	long long int tam;
-	IDCumulo_t entr;
-	J = 8208;
+  int i , j, k, l, m, C;
+  long long int tam;
+  IDCumulo_t entr;
+  J = 8208;
   strcpy(cc, com2);
   printf("cc = .%s.\n", cc);
-	f = fopen(cc, "r");
-	if (f == NULL){
+  f = fopen(cc, "r");
+  if (f == NULL){
     printf("Erro, Arquivo invalido");
     return 0;
   }
-	i = strlen(cc);
-	while(cc[i] != '/'){
+  i = strlen(cc);
+  while(cc[i] != '/'){
     printf("i = %d - %c\n", i, cc[i]);
-		i--;
-	}
+    i--;
+  }
   printf("i = %d - %c\n", i, cc[i]);
-	i++;
-	j = strlen(cc);
-	while(cc[j] != '.'){
+  i++;
+  j = strlen(cc);
+  while(cc[j] != '.'){
     printf("j = %d - %c\n", j, cc[j]);
-		j--;
-	}
+    j--;
+  }
   printf("j = %d - %c\n", j, cc[j]);
-	j++;
-	l = 0;
-	for (k = i; k < j-1; k++){
-		if (l == 13)
-			break;
-		nome[l] = cc[k];
-		l++;
-	}
-	l = 0;
-	for (m = j; m < strlen(cc); m++){
-		if (l == 4)
-			break;
-		ext[l] = cc[m];
-		l++;
-	}
+  j++;
+  l = 0;
+  for (k = i; k < j-1; k++){
+    if (l == 13)
+    break;
+    nome[l] = cc[k];
+    l++;
+  }
+  l = 0;
+  for (m = j; m < strlen(cc); m++){
+    if (l == 4)
+    break;
+    ext[l] = cc[m];
+    l++;
+  }
   printf("Nome = .%s. - Ext = .%s.\n", nome, ext);
-	fread(&ID, 1, sizeof(ID), d);
-	while (ID.nome[0] != 0){
-		fread(&ID, 1, sizeof(ID), d);
-		J = J + 32;
-	}
-	J = J - 32;
-	fseek(d, J, SEEK_SET);
-	strcpy(entr.nome, nome);
-	strcpy(entr.extensao, ext);
-	entr.tamanho = 0;
-	time ( &rawtime );
+  fread(&ID, 1, sizeof(ID), d);
+  while (ID.nome[0] != 0){
+    fread(&ID, 1, sizeof(ID), d);
+    printf("Nome = %s, ext = %s, Criacao = %u\n", ID.nome, ID.extensao, ID.criacao);
+    J = J + 32;
+  }
+  printf("++J = %llu\n", J);
+  fseek(d, J, SEEK_SET);
+  strcpy(entr.nome, nome);
+  strcpy(entr.extensao, ext);
+  entr.tamanho = 0;
+  time ( &rawtime );
   timeinfo = localtime (&rawtime);
-	entr.criacao = (timeinfo->tm_year - 100) << 4;
-	entr.criacao = (entr.criacao + (timeinfo->tm_mon + 1)) << 5;
-	entr.criacao = (entr.criacao + (timeinfo->tm_mday)) << 5;
-	entr.criacao = (entr.criacao + (timeinfo->tm_sec / 2)) << 6;
-	entr.criacao = (entr.criacao + (timeinfo->tm_min)) << 5;
-	entr.criacao = entr.criacao + timeinfo->tm_hour;
-	entr.modificacao = entr.criacao;
-	fseek(f, 0L, SEEK_END);
-	entr.tamanho = ftell(f);
-  fwrite(&entr, 1, sizeof(entr), d);
-	C = buscaponteiro(entr.tamanho);
+  entr.criacao = (timeinfo->tm_year - 100) << 4;
+  entr.criacao = (entr.criacao + (timeinfo->tm_mon + 1)) << 5;
+  entr.criacao = (entr.criacao + (timeinfo->tm_mday)) << 5;
+  entr.criacao = (entr.criacao + (timeinfo->tm_sec / 2)) << 6;
+  entr.criacao = (entr.criacao + (timeinfo->tm_min)) << 5;
+  entr.criacao = entr.criacao + timeinfo->tm_hour;
+  entr.modificacao = entr.criacao;
+  fseek(f, 0L, SEEK_END);
+  entr.tamanho = ftell(f);
+  printf("Nome = .%s. - Ext = .%s. - Tam = %u - Cri = %u - Mod = %u\n", entr.nome, entr.extensao, entr.tamanho, entr.criacao, entr.modificacao);
+  C = buscaponteiro(entr.tamanho);
   if (C == 1) {
     printf("Erro, Espaco insuficiente\n");
     return -1;
   }
+  entr.primeiro_setor = l_p[0];
+  fwrite(&entr, 1, sizeof(entr), d);
   i = 0;
+  fseek(f, 0, SEEK_SET);
   while (!feof(f)) {
     J = 8208 + (l_p[i] * (II.setores_por_bloco * 512));
     fseek(d, J, SEEK_SET);
-    for (j = 0; j < II.setores_por_bloco; j++){
-      fread(&buffer54, 1, sizeof(buffer54), f);
-      fread(&pont, 1, sizeof(pont), f);
-      printf("Lido : .%s.\n", buffer54);
-      fwrite(buffer54, 1, sizeof(buffer54), d);
-      if (j != II.setores_por_bloco-1){
-        fwrite(&pont, 1, sizeof(pont), d);
+    printf("J = %llu\n", J);
+    for (j = 0; j < ((II.setores_por_bloco * 512) - 2); j++){
+      fread(&buffer5, 1, sizeof(char), f);
+      if (feof(f)){
+        memset(&buffer5, 0, sizeof(char)) ;
       }
+      //printf("Lido : .%c.\n", buffer5);
+      fwrite(&buffer5, 1, sizeof(char), d);
     }
+    fwrite(&l_p[i+1], 1, sizeof(short), d);
+    //copy /home/administrador/Downloads/R.txt oxe
     i++;
   }
   return 0;
@@ -265,7 +276,7 @@ int main(int argc, char *op[]){
     /*strcpy(dir, "/dev/");
     strcat(dir, op[1]); //recebe o parametro e adiciona ao fim da string, que ficara como "/dev/???*"
     d = fopen(dir, "w"); //Abre o diretorio para escrita*/ //Isolado para testes com arquivos de imagem
-    d = fopen(op[1], "rw");
+    d = fopen(op[1], "r+");
     if (d == NULL){
       printf("Erro, Arquivo invalido");
       return 0;
@@ -281,20 +292,20 @@ int main(int argc, char *op[]){
 
     //Seta Inicio
     strcat(dir, "\\");
-		Q88 = 8208;
+    Q88 = 8208;
 
-		if (II.setores_por_bloco > 1){
-			Us = (512 * (II.setores_por_bloco - 1)) + 510;
-		} else {
-			Us = 510;
-		}
-		if (II.qtde_blocos == 0){
-			TBlo = 65536;
-		}	else {
-			TBlo = II.qtde_blocos;
-		}
+    if (II.setores_por_bloco > 1){
+      Us = (512 * (II.setores_por_bloco - 1)) + 510;
+    } else {
+      Us = 510;
+    }
+    if (II.qtde_blocos == 0){
+      TBlo = 65536;
+    }	else {
+      TBlo = II.qtde_blocos;
+    }
     while (ec == 0){ //Ate que o comando de saida seja dado
-			fseek(d, Q88, SEEK_SET);
+      fseek(d, Q88, SEEK_SET);
       printf("%s%s : ", op[1] ,dir);
       fgets (comando, 98, stdin);
       com = strtok(comando, " "); //com recebe a primeira parte do comando, ate o primeiro espaco
@@ -305,31 +316,31 @@ int main(int argc, char *op[]){
       }
       //printf("CC = .%s.", cc);
 
-			if (strcmp(cc, "copy") == 0 || strcmp(cc, "copy") == 0){
-				com2 = strtok(NULL, " ");
-				com3 = strtok(NULL, " ");
+      if (strcmp(cc, "copy") == 0 || strcmp(cc, "copy") == 0){
+        com2 = strtok(NULL, " ");
+        com3 = strtok(NULL, " ");
         printf("de.%s.-para.%s.\n", com2, com3);
-				strcpy(cc, com3);
-     	 	T = strlen(cc);
+        strcpy(cc, com3);
+        T = strlen(cc);
         cc[T-1] = '\0';
-				if (cc[0] == '/'){
+        if (cc[0] == '/'){
           printf("Copia de denro para fora\n");
-					T = copiario();
+          T = copiario();
           if (T == 1){
             return -1;
           }
-				}
-				strcpy(cc, com2);
-				if (cc[0] == '/'){
+        }
+        strcpy(cc, com2);
+        if (cc[0] == '/'){
           printf("Copia de fora para dentro\n");
-					T = copiaroi();
+          T = copiaroi();
           if (T == 1){
             return -1;
           }
-				} else {
-					printf("Erro\n");
-				}
-			}
+        } else {
+          printf("Erro\n");
+        }
+      }
 
       if (strcmp(cc, "oxe") == 0 || strcmp(cc, "oxe") == 0){
         while (!feof(d)){
@@ -342,11 +353,11 @@ int main(int argc, char *op[]){
       if (strcmp(cc, "dir") == 0 || strcmp(cc, "DIR") == 0){
         fread(&ID, 1, sizeof(ID), d);
         while (ID.nome[0] != 0){
-        /*printf("NBrk: .%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.\n", ID.nome[0], ID.nome[1], ID.nome[2], ID.nome[3], ID.nome[4], ID.nome[5], ID.nome[6], ID.nome[7], ID.nome[8], ID.nome[9], ID.nome[10], ID.nome[11], ID.nome[12]);
-        printf("\n\n.%hhu.-.%hhu.-.%hhu.-.%hhu.", ID.extensao[0], ID.extensao[1], ID.extensao[2], ID.extensao[3]);
-        printf("--%u--", ID.tamanho);
-        printf("++.%u.++", ID.criacao);
-        printf("++.%u.++", ID.modificacao);*/
+          /*printf("NBrk: .%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.-.%hhu.\n", ID.nome[0], ID.nome[1], ID.nome[2], ID.nome[3], ID.nome[4], ID.nome[5], ID.nome[6], ID.nome[7], ID.nome[8], ID.nome[9], ID.nome[10], ID.nome[11], ID.nome[12]);
+          printf("\n\n.%hhu.-.%hhu.-.%hhu.-.%hhu.", ID.extensao[0], ID.extensao[1], ID.extensao[2], ID.extensao[3]);
+          printf("--%u--", ID.tamanho);
+          printf("++.%u.++", ID.criacao);
+          printf("++.%u.++", ID.modificacao);*/
           escreveID();
           fread(&ID, 1, sizeof(ID), d);
         }
@@ -362,6 +373,7 @@ int main(int argc, char *op[]){
         printf("  Observacao: Espacos sao estritamente proibidos\n\n");
       }
       if (strcmp(cc, "exit") == 0 || strcmp(cc, "EXIT") == 0){ //Opcao de saida
+        fclose(d);
         return 0;
       }
     }

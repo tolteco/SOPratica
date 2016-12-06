@@ -3,7 +3,7 @@
 #include <time.h>
 
 
-typedef struct Centry
+/*typedef struct Centry
 {
 	unsigned char  nome[13];
 	unsigned char  extensao[4];
@@ -16,11 +16,12 @@ typedef struct Centry
 
 Centry_t root;
 Centry_t root2;
-Centry_t root3;
+Centry_t root3;*/
 
-char comando[100], dir[513], data1[21], temp[5], cc[102];
+char comando;//, dir[513], data1[21], temp[5], cc[102];
+FILE *f;
 
-void IntpData(unsigned int A){
+/*void IntpData(unsigned int A){
 	int i;
 	sprintf(temp, "%d", (A & 31)); //Horas
 	strcpy(data1, temp);
@@ -45,23 +46,28 @@ void IntpData(unsigned int A){
 	sprintf(temp, "%d", ((A & 127) + 2000)); //Anos
 	strcat(data1, temp);
 	A = A >> 7;
-}
+}*/
 
 int main (){
-	char *G;
-	char H[50] = "Primeiro segundo terceiro quarto quinto";
-	char J[20];
-	unsigned int criacao;
+	//char *G;
+	//char H[50] = "Primeiro segundo terceiro quarto quinto";
+	//char J[20];
+	//unsigned int criacao;
   /*long long int ts=4294967296;
   int ts2=4294967296;
   unsigned int ts3=4294967296;
   unsigned short int ts4=65535;*/
 
-	G = strtok(H, " ");
-	G = strtok(NULL, " ");
-	G = strtok(NULL, " ");
+	f = fopen("/home/administrador/Downloads/R.txt", "r");
+	while (!feof(f)) {
+		fread(&comando, 1, sizeof(comando), f);
+		printf("-%c-", comando);
+	}
+	//G = strtok(H, " ");
+	//G = strtok(NULL, " ");
+	//G = strtok(NULL, " ");
 
-	printf("\n---------\n%s\n---------\n", G);
+	/*printf("\n---------\n%s\n---------\n", G);
 	strcpy(J, G);
 	printf("%s\n", J);
 
@@ -95,7 +101,7 @@ int main (){
 	printf ( "Shift = %u\n", criacao);
 
 	IntpData(criacao);
-	printf("Data e hora retornados : %s", data1);
+	printf("Data e hora retornados : %s", data1);*/
 
 	/*time_t now = time(0); //Hora do sistema
 
